@@ -36,8 +36,8 @@ const Menu = () => {
     }
   };
   return (
-    <div className="bg-white flex flex-row items-center justify-center w-full ">
-      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold">
+    <div className="bg-white flex flex-row items-center justify-center w-full menuTxt ">
+      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold w-full">
         <li className="font-bold text-[30px]">HOME</li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
@@ -62,7 +62,7 @@ const Menu = () => {
           <div
             className={`${
               depMenu ? "flex" : "hidden"
-            } flex-col items-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
+            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
           >
             <li className="border-2 w-full p-1 flex justify-center">
               Education, ICT & Public communication
@@ -94,7 +94,7 @@ const Menu = () => {
           <div
             className={`${
               wardMenu ? "flex" : "hidden"
-            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
+            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full  `}
           >
             <li className="border-2 w-full  flex justify-center p-1">
               Lumakanda
