@@ -10,6 +10,7 @@ import coarms from "./coarms.png";
 import mp from "./mp.jpg";
 import constr from "./constr.jpg";
 import whiteline from "./whiteline.png";
+import harvest2 from "./harvest.jpg";
 
 const deps = [
   {
@@ -51,4 +52,5 @@ export {
   whiteline,
   deps,
   news,
+  harvest2,
 };

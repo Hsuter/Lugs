@@ -1,42 +1,143 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const Menu = () => {
+  const [depMenu, setDepMenu] = useState(false);
+  const [staffMenu, setStaffMenu] = useState(false);
+  const [wardMenu, setWardMenu] = useState(false);
+
+  const handleDepMenu = () => {
+    if (!depMenu) {
+      setDepMenu(true);
+      setStaffMenu(false);
+      setWardMenu(false);
+    } else {
+      setDepMenu(false);
+    }
+  };
+  const handleStaffMenu = () => {
+    if (!staffMenu) {
+      setStaffMenu(true);
+      setDepMenu(false);
+      setWardMenu(false);
+    } else {
+      setStaffMenu(false);
+    }
+  };
+  const handleWardMenu = () => {
+    if (!wardMenu) {
+      setWardMenu(true);
+      setDepMenu(false);
+      setStaffMenu(false);
+    } else {
+      setWardMenu(false);
+    }
+  };
   return (
-    <div className="bg-white flex flex-row w-full items-center justify-center ">
-      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold ">
+    <div className="bg-white flex flex-row items-center justify-center w-full ">
+      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold">
         <li className="font-bold text-[30px]">HOME</li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li>About LC</li>
+        <li className="flex ">About </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li>
-          Departmets
-          <span>
-            <ArrowDropDownIcon />
-          </span>
+        <li
+          onClick={handleDepMenu}
+          className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full items-center"
+        >
+          <div className="flex flex-row gap-2 w-full items-center justify-center">
+            Departments
+            <div className="flex flex-col relative items-center">
+              <span className="text-white bg-green rounded-full">
+                {depMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+              </span>
+            </div>
+          </div>
+
+          <div
+            className={`${
+              depMenu ? "flex" : "hidden"
+            } flex-col items-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
+          >
+            <li className="border-2 w-full p-1 flex justify-center">
+              Education, ICT & Public communication
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Finance and economic planning
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Infrastructure
+            </li>
+          </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li>
-          Wards
-          <span>
-            <ArrowDropDownIcon />
-          </span>
+        <li
+          onClick={handleWardMenu}
+          className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
+        >
+          <div className="flex flex-row gap-2 w-full items-center justify-center">
+            Wards
+            <div className="flex flex-col relative items-center  ">
+              <span className="text-white bg-green rounded-full">
+                {wardMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+              </span>
+            </div>
+          </div>
+
+          <div
+            className={`${
+              wardMenu ? "flex" : "hidden"
+            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
+          >
+            <li className="border-2 w-full  flex justify-center p-1">
+              Lumakanda
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Lwandeti
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Chekalini
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Chevaywaand
+            </li>
+          </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li>
-          Staff
-          <span className="md:rotate-0 rotate-90">
-            <ArrowDropDownIcon />
-          </span>
+        <li
+          onClick={handleStaffMenu}
+          className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
+        >
+          <div className="flex flex-row gap-2 w-full items-center justify-center">
+            Staff
+            <div className="flex flex-col relative items-center  ">
+              <span className="text-white bg-green rounded-full">
+                {staffMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+              </span>
+            </div>
+          </div>
+
+          <div
+            className={`${
+              staffMenu ? "flex" : "hidden"
+            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
+          >
+            <li className="border-2 w-full  flex justify-center p-1">
+              Member of parliament
+            </li>
+            <li className="border-2 w-full p-1 flex justify-center">
+              Communication Director
+            </li>
+          </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />

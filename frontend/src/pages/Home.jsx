@@ -8,6 +8,7 @@ import {
   whiteline,
   deps,
   news,
+  harvest2,
 } from "../assets";
 import { Link } from "react-router-dom";
 import Menu from "../components/Menu";
@@ -24,6 +25,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const Home = () => {
   const [menu, setMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleMenu = () => {
     if (!menu) {
@@ -42,13 +44,21 @@ const Home = () => {
     lat: 0.652153, // Replace with your desired latitude
     lng: 34.874953, // Replace with your desired longitude
   };
-
+  console.log(screenWidth);
   useEffect(() => {
-    console.log(deps);
-  });
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="bg-white items-center flex flex-col ">
-      <div className="bg-green w-full items-center flex flex-col justify-center absolute z-20 top-0">
+      <div className="bg-green w-full items-center flex flex-col justify-center z-20 top-0">
         <div className="py-2 w-full flex flex-col items-center">
           <div
             className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
@@ -70,17 +80,26 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center relative">
-        <img src={harvest} alt="bunner" className="w-full " />
+      <div className="flex flex-col items-center relative bg-black ">
+        <img
+          src={harvest}
+          alt="bunner"
+          className={`w-full ${screenWidth > 750 ? "flex" : "hidden"}`}
+        />
+        <img
+          src={harvest2}
+          alt="bunner"
+          className={`w-full ${screenWidth < 750 ? "flex" : "hidden"}`}
+        />
         <img
           src={bunnerText}
           alt="LugariConstituencyBunnerText"
-          className="z-10 w-[200px] md:w-[400px] lg:w-[800px] absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="z-10 w-[300px] md:w-[500px] lg:w-[800px] absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
         <img
           src={coarms}
           alt="LugariConstituencyBunnerText"
-          className="z-10  w-[100px] md:-[200px] lg-[400px] absolute top-[68%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="z-10  w-[400px] md:w-[400px] lg:w-[500px] absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
       {/*About*/}
