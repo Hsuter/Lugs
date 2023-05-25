@@ -48,7 +48,7 @@ const Home = () => {
   });
   return (
     <div className="bg-white items-center flex flex-col ">
-      <div className="bg-green w-full items-center flex flex-col justify-center">
+      <div className="bg-green w-full items-center flex flex-col justify-center absolute z-20 top-0">
         <div className="py-2 w-full flex flex-col items-center">
           <div
             className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
@@ -61,7 +61,7 @@ const Home = () => {
             )}
           </div>
 
-          <div className={`w-full ${menu ? "flex" : "lg:flex hidden"}`}>
+          <div className={`w-full   ${menu ? "flex  " : "lg:flex hidden"}`}>
             <Menu />
           </div>
 
