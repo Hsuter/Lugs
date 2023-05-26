@@ -42,7 +42,13 @@ const Menu = ({ setMenu }) => {
     <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt lg:h-full h-[100vh] lg:mt-0 mt-[-10px] ">
       <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold  w-full ">
         <li className="font-bold text-[30px] cursor-pointer">
-          <a href="#home" onClick={() => setMenu(false)}>
+          <a
+            href="#homee"
+            onClick={() => {
+              setMenu(false);
+              handleHome();
+            }}
+          >
             Home
           </a>
         </li>

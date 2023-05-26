@@ -18,7 +18,6 @@ import { useEffect } from "react";
 import NewsCard from "../components/NewsCard";
 
 const Home = () => {
-  const [menu, setMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   // Replace with your desired longitude
@@ -35,7 +34,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white items-center flex flex-col" id="home">
+    <div className="bg-white items-center flex flex-col" id="homee">
       <div className="flex flex-col items-center relative bg-black ">
         <img
           src={harvest}
