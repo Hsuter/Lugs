@@ -163,7 +163,7 @@ const Home = () => {
             />
           </span>
           <div className="flex flex-col">
-            <h1 className="text-green font-bold underline text-[30px]">
+            <h1 className="text-green font-bold text-[30px]">
               Vision
             </h1>
             <p className="font-bold">
