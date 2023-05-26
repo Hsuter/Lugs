@@ -13,18 +13,23 @@ import {
 import { Link } from "react-router-dom";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DepsCard from "../components/DepsCard";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
+import { ScrollContext } from "../ScrollContext";
 
 const Home = () => {
+  const scrolls = useContext(ScrollContext);
+  const { profile, setProfile } = scrolls;
   const navigate = useNavigate();
-  const location = useLocation();
-  const profile = location.state?.profile;
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleAbout = () => {
-    console.log(profile);
+    setProfile("MP");
+    navigate("/staff_profile");
+    window.scrollTo(0, 0);
+    console.log("profile", profile);
   };
 
   useEffect(() => {
@@ -172,7 +177,9 @@ const Home = () => {
 
             <button
               className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10"
-              onClick={handleAbout}
+              onClick={() => {
+                handleAbout();
+              }}
             >
               <VisibilityIcon />
               <img src={whiteline} className="w-[1px] py-[4px]" />

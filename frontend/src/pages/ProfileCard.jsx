@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { mp } from "../assets";
+import { ScrollContext } from "../ScrollContext";
 
 const ProfileCard = () => {
-  const location = useLocation();
-  const profile = location.state?.profile;
+  const scrolls = useContext(ScrollContext);
+  const { profile } = scrolls;
 
   return (
     <div className="flex w-full lg:pt-20 items-center justify-center">

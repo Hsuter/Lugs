@@ -8,8 +8,8 @@ import { ScrollContext } from "../ScrollContext";
 
 const Menu = ({ setMenu }) => {
   const scrolls = useContext(ScrollContext);
+  const { profile, setProfile } = scrolls;
 
-  const [profile, setProfile] = useState("");
   const navigate = useNavigate();
   const [depMenu, setDepMenu] = useState(false);
   const [staffMenu, setStaffMenu] = useState(false);
