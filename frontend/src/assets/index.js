@@ -27,17 +27,20 @@ const news = [
   {
     news1: {
       image: constr,
-      title: "Rehabilitation of various roadsin LC on course",
+      title: "Inaugural education stakeholder's conference",
+      location:
+        "Salvation Army Hall - The salvation army officers training college",
+      date: "4th November 2022",
     },
   },
   {
     news2: {
       image: covid,
-      title:
-        "Vaccination Action Network (VAN):Driving Vaccine Uptake andPublic Health Impact",
+      title: "Launch of the Inaugural Lugari contitiency NG-CDF and Bursaries",
+      location: "The Mataru primary school",
+      date: "12th February 2023",
     },
   },
-  { news3: { image: sports, title: "Constituency Sports" } },
 ];
 
 export {

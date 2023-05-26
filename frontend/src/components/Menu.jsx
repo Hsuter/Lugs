@@ -36,8 +36,8 @@ const Menu = () => {
     }
   };
   return (
-    <div className="bg-white flex flex-row items-center justify-center w-full menuTxt ">
-      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold w-full">
+    <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt  ">
+      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold  w-full ">
         <li className="font-bold text-[30px]">HOME</li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
@@ -48,7 +48,7 @@ const Menu = () => {
         </span>
         <li
           onClick={handleDepMenu}
-          className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full items-center"
+          className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full  items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
             Departments

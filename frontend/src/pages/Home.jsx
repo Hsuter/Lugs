@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   harvest,
   coarms,
@@ -19,11 +19,17 @@ import NewsCard from "../components/NewsCard";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Home = () => {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "AIzaSyCJmdTt_xN84L9bGmp2gVxP6ivrM0c2OEc",
+  });
+
+  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+
   const [menu, setMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -35,16 +41,8 @@ const Home = () => {
     }
   };
 
-  const mapContainerStyle = {
-    width: "100%",
-    height: "400px",
-  };
+  // Replace with your desired longitude
 
-  const center = {
-    lat: 0.652153, // Replace with your desired latitude
-    lng: 34.874953, // Replace with your desired longitude
-  };
-  console.log(screenWidth);
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -273,9 +271,9 @@ const Home = () => {
           <div className="bg-orange w-full h-[20px]"></div>
         </div>
       </div>
-      <div className="flex flex-col w-full bg-green items-center ">
-        <div className="flex flex-row bg-green gap-8 w-full justify-around">
-          <div className="flex flex-col bg-gray-500 text-blackdark font-bold  items-center">
+      <div className="flex flex-col w-full bg-green items-center footertxt">
+        <div className="flex lg:flex-row flex-col bg-green gap-8  justify-around items-center ">
+          <div className="flex flex-col bg-gray-500 text-blackdark font-bold justify-center  items-center gap-2 pt-4 ">
             <h1>OFFICIAL CONTACTS</h1>
             <p>
               <WhatsAppIcon />
@@ -290,23 +288,35 @@ const Home = () => {
             </p>
             <img src={coarms} alt="coart_of_arms" className="w-[300px]" />
           </div>
-          <div className="flex flex-col text-white">
-            <h1>Services</h1>
-            <p>Busary Forms</p>
-            <p>Careers</p>
-            <p>Tenders & Notices</p>
-            <p>Emergency Services</p>
-            <p>Downloads</p>
-            <p>FAQs & Help Desks</p>
+          <div className="flex flex-col text-white  items-center list-none w-full ">
+            <h1 className="text-[30px]">Services</h1>
+            <li className="hover:text-blue-600 cursor-pointer">Busary Forms</li>
+            <li className="hover:text-blue-600 cursor-pointer">Careers</li>
+            <li className="hover:text-blue-600 cursor-pointer">
+              Tenders & Notices
+            </li>
+            <li className="hover:text-blue-600 cursor-pointer">
+              Emergency Services
+            </li>
+            <li className="hover:text-blue-600 cursor-pointer">Downloads</li>
+            <li className="hover:text-blue-600 cursor-pointer">
+              FAQs & Help Desks
+            </li>
           </div>
           <div>
-            <LoadScript googleMapsApiKey="AIzaSyD5BKa5Uk6znVEdYA7Alr4JwP97d4s-ntw">
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={center}
-                zoom={12}
-              />
-            </LoadScript>
+            {isLoaded ? (
+              <div>
+                <GoogleMap
+                  zoom={10}
+                  center={center}
+                  mapContainerClassName="map-container"
+                >
+                  <MarkerF position={center} />
+                </GoogleMap>
+              </div>
+            ) : (
+              <p>loading</p>
+            )}
           </div>
         </div>
         <p>Copyright © 2023 Constituency of Lugari . All Rights Reserved.</p>
