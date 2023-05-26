@@ -55,7 +55,7 @@ const Menu = ({ setMenu }) => {
   const handleDepMenuLeave = () => {
     setTimeout(() => {
       setDepMenu(false);
-    }, 300);
+    }, 3000);
   };
 
   const handleStaffMenuEnter = () => {
@@ -68,7 +68,7 @@ const Menu = ({ setMenu }) => {
     // Delay hiding the menu to allow moving the cursor to the sub-menu
     setTimeout(() => {
       setStaffMenu(false);
-    }, 300);
+    }, 3000);
   };
 
   const handleWardMenuEnter = () => {
@@ -80,7 +80,7 @@ const Menu = ({ setMenu }) => {
   const handleWardMenuLeave = () => {
     setTimeout(() => {
       setWardMenu(false);
-    }, 300);
+    }, 3000);
   };
 
   useEffect(() => {
