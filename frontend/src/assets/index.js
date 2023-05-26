@@ -11,6 +11,7 @@ import mp from "./mp.jpg";
 import constr from "./constr.jpg";
 import whiteline from "./whiteline.png";
 import harvest2 from "./harvest.jpg";
+import bursary from "./bursary.jpg";
 
 const deps = [
   {
@@ -35,7 +36,7 @@ const news = [
   },
   {
     news2: {
-      image: covid,
+      image: bursary,
       title: "Launch of the Inaugural Lugari contitiency NG-CDF and Bursaries",
       location: "The Maturu Primary School",
       date: "12th February 2023",
