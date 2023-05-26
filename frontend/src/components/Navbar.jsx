@@ -30,7 +30,7 @@ const Navbar = ({ profile, setProfile }) => {
   }, []);
   return (
     <div
-      className="bg-green w-full items-center flex flex-col justify-center fixed z-20 top-0"
+      className="bg-green w-full items-center flex flex-col justify-center"
       id="home"
     >
       <div className="py-2 w-full flex flex-col items-center ">

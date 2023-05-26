@@ -18,6 +18,7 @@ import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 
+
 const Home = () => {
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
@@ -44,7 +45,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white items-center flex flex-col lg:mt-20" id="homee">
+    <div className="bg-white items-center flex flex-col " id="homee">
       <div className="flex flex-col items-center relative bg-black ">
         <img
           src={harvest}
@@ -72,9 +73,9 @@ const Home = () => {
         className="flex flex-col w-full bg-white gap-2 md:gap-6 mt-2 md:py-10 py-4"
         id="about"
       >
-        <div className="flex flex-row w-full  justify-center ">
-          <h1 className="flex-col text-green  with-slanted-edge-right md:p-6 flex items-center justify-center md:text-[30px] text-[25px] font-bold">
-            About Constituency
+        <div class="flex flex-row gap-2 w-full justify-center">
+          <h1 class="flex-col text-green with-slanted-edge-right p-1 md:p-6 flex items-center justify-center md:text-[30px] font-bold">
+            <span class="underline-motion">About Constituency</span>
           </h1>
         </div>
         <p className="about px-2 md:px-14 ">
@@ -101,13 +102,17 @@ const Home = () => {
 
         <div className="flex  flex-col mx-2  md:mx-10 gap-4 mmvtext  ">
           <div className="items-center flex flex-col gap-4">
-            <h1 className="text-green font-bold text-[24px]">Mantra</h1>
+            <h1 className="text-green font-bold text-[24px] underline-motion">
+              Mantra
+            </h1>
             <p className="font-bold">
               Lugari Constituency, a centre of excellence under 4G network.
             </p>
           </div>
           <div className="items-center flex flex-col gap-4">
-            <h1 className="text-green font-bold text-[24px]">Mission</h1>
+            <h1 className="text-green font-bold text-[24px] underline-motion">
+              Mission
+            </h1>
             <p className="">
               To serve as a comprehensive online platform that fosters
               communication, accessibility, and community engagement. We aim to
@@ -119,7 +124,9 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-green font-bold text-[24px]">Vision</h1>
+            <h1 className="text-green font-bold text-[24px] underline-motion">
+              Vision
+            </h1>
             <p className="">
               To establish a dynamic virtual space that transcends geographical
               boundaries, enabling seamless communication and collaboration thus
@@ -204,7 +211,7 @@ const Home = () => {
       {/*Departments*/}
       <div className="flex flex-col w-full my-5" id="deps">
         <div className="flex flex-row  w-full">
-          <h1 className="md:text-[30px] text-[25px] font-bold text-green w-full  flex flex-row md:py-5 pl-10">
+          <h1 className="md:text-[30px] text-[25px] font-bold text-green w-full  flex flex-row md:py-5 pl-10 underline-motion">
             Constituency Services / Departments
           </h1>
         </div>
@@ -224,7 +231,7 @@ const Home = () => {
         id="speeches"
       >
         <div className="flex md:flex-row  w-full">
-          <h1 className="md:text-[30px] text-[25px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
+          <h1 className="md:text-[30px] underline-motion text-[25px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
             News $ Speeches
           </h1>
         </div>
@@ -237,8 +244,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Contacts*/}
     </div>
   );
 };

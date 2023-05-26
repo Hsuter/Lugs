@@ -43,6 +43,7 @@ const Menu = ({ setMenu }) => {
     }
   };
   const handleHome = () => {
+    navigate("/");
     window.scrollTo(0, 0);
   };
 
@@ -94,19 +95,17 @@ const Menu = ({ setMenu }) => {
   return (
     <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt lg:h-full h-[100vh] lg:mt-0 mt-[-10px] ">
       <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold   py-2 ">
-        <Link to="/">
-          <li className="font-bold  cursor-pointer">
-            <a
-              href="#homee"
-              onClick={() => {
-                setMenu(false);
-                handleHome();
-              }}
-            >
-              Home
-            </a>
-          </li>
-        </Link>
+        <li className="font-bold  cursor-pointer">
+          <a
+            href="#homee"
+            onClick={() => {
+              setMenu(false);
+              handleHome();
+            }}
+          >
+            Home
+          </a>
+        </li>
 
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
@@ -143,38 +142,46 @@ const Menu = ({ setMenu }) => {
               staffMenu ? "flex" : "hidden"
             } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
           >
-            <li
+            <p
               className="border-b-2 border-green w-full  flex justify-center p-1"
               onClick={() => {
                 setProfile("MP");
+                navigate("/staff_profile");
+                window.scrollTo(0, 0);
               }}
             >
               Member of parliament
-            </li>
-            <li
+            </p>
+            <p
               className="border-b-2 border-green w-full p-1 flex justify-center"
               onClick={() => {
                 setProfile("COM");
+                navigate("/staff_profile");
+                window.scrollTo(0, 0);
               }}
             >
               Constituency Office Manager
-            </li>
-            <li
+            </p>
+            <p
               className="border-b-2 border-green w-full p-1 flex justify-center"
               onClick={() => {
                 setProfile("DCM");
+                navigate("/staff_profile");
+                window.scrollTo(0, 0);
               }}
             >
               Deputy Constituency Manager
-            </li>
-            <li
+            </p>
+            <p
               className="border-b-2 border-green w-full p-1 flex justify-center"
               onClick={() => {
                 setProfile("DCM");
+                navigate("/staff_profile");
+                window.scrollTo(0, 0);
               }}
             >
               History of LC
-            </li>
+            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
@@ -200,17 +207,17 @@ const Menu = ({ setMenu }) => {
           <div
             className={`${
               depMenu ? "flex" : "hidden"
-            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
+            } flex-col items-pnter justify-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
           >
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+            <p className="border-b-2 border-green w-full p-1 flex justify-center">
               Education, ICT & Public communication
-            </li>
-            <li className="border-b-2 border-green  w-full p-1 flex justify-center">
+            </p>
+            <p className="border-b-2 border-green  w-full p-1 flex justify-center">
               Finance and economic planning
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+            </p>
+            <p className="border-b-2 border-green w-full p-1 flex justify-center">
               Infrastructure
-            </li>
+            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
@@ -236,21 +243,21 @@ const Menu = ({ setMenu }) => {
               wardMenu ? "flex" : "hidden"
             } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full  `}
           >
-            <li className="border-b-2 border-green w-full  flex justify-center p-1">
+            <p className="border-b-2 border-green w-full  flex justify-center p-1">
               Lumakanda
-            </li>
-            <li className="border-b-2 border-green w-full  flex justify-center p-1">
+            </p>
+            <p className="border-b-2 border-green w-full  flex justify-center p-1">
               Lugari
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+            </p>
+            <p className="border-b-2 border-green w-full p-1 flex justify-center">
               Lwandeti
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+            </p>
+            <p className="border-b-2 border-green w-full p-1 flex justify-center">
               Chekalini
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+            </p>
+            <p className="border-b-2 border-green w-full p-1 flex justify-center">
               Chevaywaand
-            </li>
+            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">

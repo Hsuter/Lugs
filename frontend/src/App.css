@@ -37,3 +37,26 @@
 .txtalign {
   text-align: center;
 }
+
+.underline-motion {
+  position: relative;
+  display: inline-block;
+  transition: transform 5s;
+}
+
+.underline-motion::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: green;
+  transition: transform 5s;
+  transform-origin: right;
+}
+
+.underline-motion:hover::after {
+  transform: scaleX(0);
+  transform-origin: left;
+}
