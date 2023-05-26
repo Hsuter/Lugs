@@ -125,10 +125,12 @@ const Menu = ({ setMenu }) => {
               onClick={() => {
                 setMenu(false);
                 handleHome();
+                navigate("/");
               }}
             >
               About LC
             </a>
+
             <div className="flex flex-col relative items-center  ">
               <span className="text-green">
                 {staffMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}

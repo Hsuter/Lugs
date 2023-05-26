@@ -15,12 +15,17 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import DepsCard from "../components/DepsCard";
 import { useEffect } from "react";
 import NewsCard from "../components/NewsCard";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const profile = location.state?.profile;
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  // Replace with your desired longitude
+  const handleAbout = () => {
+    console.log(profile);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -133,10 +138,10 @@ const Home = () => {
 
       {/*Mp*/}
       <div className="flex flex-col w-full bg-gray-100 lg:py-10">
-        <div className="flex md:flex-row flex-col  gap-10 md:mt-20  ">
+        <div className="flex md:flex-row flex-col  gap-10   ">
           <div className="flex flex-col items-center  md:max-w-[60vw]">
             <div className="flex flex-col items-center">
-              <h1 className="text-green font-bold  md:text-[30px] text-[25px] lg:mt-20 mt-10">
+              <h1 className="text-green font-bold  md:text-[30px] text-[25px] mt-10">
                 Mp's Welcome Note
               </h1>
               <div className="flex flex-row w-full gap-1">
@@ -165,7 +170,10 @@ const Home = () => {
               </div>
             </div>
 
-            <button className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10">
+            <button
+              className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10"
+              onClick={handleAbout}
+            >
               <VisibilityIcon />
               <img src={whiteline} className="w-[1px] py-[4px]" />
               ABOUT MP

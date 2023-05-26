@@ -5,7 +5,8 @@ import { mp } from "../assets";
 const ProfileCard = () => {
   const location = useLocation();
   const profile = location.state?.profile;
-  console.log("state", profile);
+  console.log(profile);
+
   return (
     <div className="flex w-full lg:pt-20 items-center justify-center">
       {profile == "MP" ? (
@@ -30,7 +31,12 @@ const ProfileCard = () => {
                 oath of office.
               </p>
 
-              <p className="font-bold">Nabweri Daraja Nabii <span className="font-light text-[14px]">M.P - Lugari constituency</span></p>
+              <p className="font-bold">
+                Nabweri Daraja Nabii{" "}
+                <span className="font-light text-[14px]">
+                  M.P - Lugari constituency
+                </span>
+              </p>
             </div>
           </div>
         </div>
