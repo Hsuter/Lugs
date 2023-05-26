@@ -7,7 +7,7 @@ const ProfileCard = () => {
   const profile = location.state?.profile;
   console.log("state", profile);
   return (
-    <div className="flex w-full pt-20 items-center justify-center">
+    <div className="flex w-full lg:pt-20 items-center justify-center">
       {profile == "MP" ? (
         <div className="flex lg:flex-row flex-col items bg-gray-100  w-[800px] my-20 justify-between">
           <div className="flex  items center justify-center ">

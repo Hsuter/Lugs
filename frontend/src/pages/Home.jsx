@@ -209,7 +209,7 @@ const Home = () => {
         id="speeches"
       >
         <div className="flex md:flex-row  w-full">
-          <h1 className="md:text-[30px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
+          <h1 className="md:text-[30px] text-[25px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
             News $ Speeches
           </h1>
         </div>

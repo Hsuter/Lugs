@@ -37,7 +37,7 @@ const news = [
     news2: {
       image: covid,
       title: "Launch of the Inaugural Lugari contitiency NG-CDF and Bursaries",
-      location: "The Mataru primary school",
+      location: "The Maturu Primary School",
       date: "12th February 2023",
     },
   },
