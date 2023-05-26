@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Menu = ({ setMenu }) => {
+  const [profile, setProfile] = useState("");
+  const navigate = useNavigate();
   const [depMenu, setDepMenu] = useState(false);
   const [staffMenu, setStaffMenu] = useState(false);
   const [wardMenu, setWardMenu] = useState(false);
+
+  console.log(profile);
 
   const handleDepMenu = () => {
     if (!depMenu) {
@@ -38,25 +44,95 @@ const Menu = ({ setMenu }) => {
   const handleHome = () => {
     window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    if (profile == "") {
+      null;
+    } else {
+      navigate("/staff_profile", { state: { profile } });
+      setMenu(false);
+    }
+  }, [profile]);
   return (
     <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt lg:h-full h-[100vh] lg:mt-0 mt-[-10px] ">
-      <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold  w-full ">
-        <li className="font-bold text-[30px] cursor-pointer">
-          <a
-            href="#homee"
-            onClick={() => {
-              setMenu(false);
-              handleHome();
-            }}
-          >
-            Home
-          </a>
-        </li>
+      <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold   py-2 ">
+        <Link to="/">
+          <li className="font-bold  cursor-pointer">
+            <a
+              href="#homee"
+              onClick={() => {
+                setMenu(false);
+                handleHome();
+              }}
+            >
+              Home
+            </a>
+          </li>
+        </Link>
+
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li className="flex " onClick={() => setMenu(false)}>
-          <a href="#about">About</a>
+        <li
+          onClick={handleStaffMenu}
+          className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
+          on
+        >
+          <div className="flex  w-[150px] flex-row gap-2  items-center justify-center">
+            <a
+              href="#about"
+              onClick={() => {
+                setMenu(false);
+                handleHome();
+              }}
+            >
+              About LC
+            </a>
+            <div className="flex flex-col relative items-center  ">
+              <span className="text-green">
+                {staffMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+              </span>
+            </div>
+          </div>
+
+          <div
+            className={`${
+              staffMenu ? "flex" : "hidden"
+            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
+          >
+            <li
+              className="border-b-2 border-green w-full  flex justify-center p-1"
+              onClick={() => {
+                setProfile("MP");
+              }}
+            >
+              Member of parliament
+            </li>
+            <li
+              className="border-b-2 border-green w-full p-1 flex justify-center"
+              onClick={() => {
+                setProfile("COM");
+              }}
+            >
+              Constituency Office Manager
+            </li>
+            <li
+              className="border-b-2 border-green w-full p-1 flex justify-center"
+              onClick={() => {
+                setProfile("DCM");
+              }}
+            >
+              Deputy Constituency Manager
+            </li>
+            <li
+              className="border-b-2 border-green w-full p-1 flex justify-center"
+              onClick={() => {
+                setProfile("DCM");
+              }}
+            >
+              History of LC
+            </li>
+          </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
@@ -70,7 +146,7 @@ const Menu = ({ setMenu }) => {
               Departments
             </a>
             <div className="flex flex-col relative items-center">
-              <span className="text-white bg-green rounded-full">
+              <span className="text-green ">
                 {depMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
               </span>
             </div>
@@ -102,7 +178,7 @@ const Menu = ({ setMenu }) => {
           <div className="flex flex-row gap-2 w-full items-center justify-center">
             Wards
             <div className="flex flex-col relative items-center  ">
-              <span className="text-white bg-green rounded-full">
+              <span className="text-green">
                 {wardMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
               </span>
             </div>
@@ -130,38 +206,7 @@ const Menu = ({ setMenu }) => {
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li
-          onClick={handleStaffMenu}
-          className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
-        >
-          <div className="flex flex-row gap-2 w-full items-center justify-center">
-            Staff
-            <div className="flex flex-col relative items-center  ">
-              <span className="text-white bg-green rounded-full">
-                {staffMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
-              </span>
-            </div>
-          </div>
 
-          <div
-            className={`${
-              staffMenu ? "flex" : "hidden"
-            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
-          >
-            <li className="border-b-2 border-green w-full  flex justify-center p-1">
-              Member of parliament
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
-              Constituency Office Manager
-            </li>
-            <li className="border-b-2 border-green w-full p-1 flex justify-center">
-              Deputy Constituency Manager
-            </li>
-          </div>
-        </li>
-        <span className="lg:rotate-0 rotate-90">
-          <img src={line} className="w-[2px] h-[30px]" />
-        </span>
         <li>Career</li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />

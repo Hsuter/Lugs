@@ -34,7 +34,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white items-center flex flex-col" id="homee">
+    <div className="bg-white items-center flex flex-col lg:mt-20" id="homee">
       <div className="flex flex-col items-center relative bg-black ">
         <img
           src={harvest}
@@ -59,16 +59,16 @@ const Home = () => {
       </div>
       {/*About*/}
       <div
-        className="flex flex-col w-full bg-white gap-2 md:gap-10 mt-2 md:mt-28"
+        className="flex flex-col w-full bg-white gap-2 md:gap-6 mt-2 md:py-10"
         id="about"
       >
-        <div className="flex flex-row gap-2 w-full ">
-          <h1 className="bg-green w-full with-slanted-edge-right p-1 md:p-6 flex items-center justify-center md:text-[30px] text-white font-bold">
+        <div className="flex flex-row w-full  justify-center ">
+          <h1 className="flex-col text-green  with-slanted-edge-right md:p-6 flex items-center justify-center md:text-[30px] font-bold">
             About Constituency
+            
           </h1>
-          <span className="bg-orange w-full with-slanted-edge-left"></span>
         </div>
-        <p className="about px-2 md:px-14 font-bold">
+        <p className="about px-2 md:px-14 ">
           Lugari Constituency is an electoral constituency among the 290
           constituencies in Kenya . It is one of the 12 constituencies of
           Kakamega County. It comprises of 6 County Assembly wards namely:{" "}
@@ -89,18 +89,17 @@ const Home = () => {
           rains it's a hurb of more food crops ie maize, beans, sugarcane and
           sweet potatoes.
         </p>
-        <div className="flex flex-col gap-1 md:gap-2">
-          <div className="w-full bg-green h-[5px] md:h-[10px]"></div>
-          <div className="w-full bg-green h-[5px] md:h-[10px]"></div>
-        </div>
-        <div className="flex md:flex-row flex-col mx-2  md:mx-10 gap-10">
-          <div className="flex flex-col">
-            <h1 className="text-green font-bold text-[30px]">Mantra</h1>
+
+        <div className="flex  flex-col mx-2  md:mx-10 gap-4 mmvtext  ">
+          <div className="items-center flex flex-col gap-4">
+            <h1 className="text-green font-bold text-[24px]">Mantra</h1>
             <p className="font-bold">
               Lugari Constituency, a centre of excellence under 4G network.
             </p>
-            <h1 className="text-green font-bold text-[30px]">Mission</h1>
-            <p className="font-bold">
+          </div>
+          <div className="items-center flex flex-col gap-4">
+            <h1 className="text-green font-bold text-[24px]">Mission</h1>
+            <p className="">
               To serve as a comprehensive online platform that fosters
               communication, accessibility, and community engagement. We aim to
               provide a centralized hub that bridges the gap the leadership and
@@ -109,16 +108,10 @@ const Home = () => {
               development and progress of our constituency.
             </p>
           </div>
-          <span className="w-full items-center flex justify-center">
-            <img
-              src={line}
-              alt="greenline"
-              className="md:rotate-0 rotate-90 md:w-null w-2 md:my-null my-[-150px] "
-            />
-          </span>
-          <div className="flex flex-col">
-            <h1 className="text-green font-bold text-[30px]">Vision</h1>
-            <p className="font-bold">
+
+          <div className="flex flex-col items-center justify-center gap-4">
+            <h1 className="text-green font-bold text-[24px]">Vision</h1>
+            <p className="">
               To establish a dynamic virtual space that transcends geographical
               boundaries, enabling seamless communication and collaboration thus
               creating an environment where citizens can easily access vital
@@ -140,7 +133,7 @@ const Home = () => {
       </div>
 
       {/*Mp*/}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full bg-gray-100 py-10">
         <div className="flex md:flex-row flex-col  gap-10 md:mt-20  ">
           <div className="flex flex-col items-center  md:max-w-[60vw]">
             <div className="flex flex-col items-center">
@@ -186,16 +179,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="bg-orange w-full h-[40px] my-20"></div>
       </div>
 
       {/*Departments*/}
       <div className="flex flex-col w-full" id="deps">
         <div className="flex flex-row  w-full">
-          <h1 className="md:text-[30px] font-bold bg-green w-full text-white flex flex-row items-center justify-center  md:py-5">
+          <h1 className=" md:text-[30px] font-bold text-green w-full  flex flex-row md:py-5 pl-10">
             Constituency Services / Departments
           </h1>
-          <div className="bg-orange w-full"></div>
         </div>
         <div className="flex flex-row flex-wrap mt-8 items-center justify-center">
           <div className="flex flex-row flex-wrap items-center justify-center mx-20 gap-10 ">
@@ -208,12 +199,12 @@ const Home = () => {
       </div>
 
       {/*News and speeches*/}
-      <div className="flex flex-col w-full mt-10 " id="speeches">
+      <div className="flex flex-col w-full mt-10 bg-gray-100 py-10 " id="speeches">
         <div className="flex md:flex-row  w-full">
-          <h1 className="md:text-[30px] font-bold bg-green w-full text-white flex flex-row items-center justify-center py-5">
+          <h1 className="md:text-[30px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
             News $ Speeches
           </h1>
-          <div className="bg-orange w-full"></div>
+          
         </div>
         <div className="flex flex-row flex-wrap mt-8 items-center justify-center">
           <div className="flex flex-row flex-wrap items-center justify-center mx-20 gap-10 ">
@@ -222,10 +213,6 @@ const Home = () => {
               return <NewsCard allnews={value} key={key} i={i} />;
             })}
           </div>
-        </div>
-        <div className="flex flex-col my-8">
-          <div className="bg-green w-full"></div>
-          <div className="bg-orange w-full h-[20px]"></div>
         </div>
       </div>
 

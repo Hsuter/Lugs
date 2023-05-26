@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Menu from "../components/Menu";
 
-const Navbar = () => {
+const Navbar = ({ profile, setProfile }) => {
   const [menu, setMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <div className={`w-full   ${menu ? "flex" : "lg:flex hidden"}`}>
-          <Menu setMenu={setMenu} />
+          <Menu setMenu={setMenu} profile={profile} setProfile={setProfile} />
         </div>
 
         <h1 className="text-white md:text-[30px]">

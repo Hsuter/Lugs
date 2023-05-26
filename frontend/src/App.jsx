@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProfileCard from "./pages/ProfileCard";
 
 function App() {
   return (
@@ -14,9 +15,23 @@ function App() {
             path="/"
             element={
               <>
-                <Navbar />
-                <Home />
-                <Footer />
+                <div className="flex flex-col">
+                  <Navbar />
+                  <Home />
+                  <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/staff_profile"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Navbar />
+                  <ProfileCard />
+                  <Footer />
+                </div>
               </>
             }
           />
