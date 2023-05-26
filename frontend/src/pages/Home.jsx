@@ -55,7 +55,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white items-center flex flex-col">
+    <div className="bg-white items-center flex flex-col" id="home">
       <div
         className="bg-green w-full items-center flex flex-col justify-center fixed z-20 top-0"
         id="home"
@@ -73,7 +73,7 @@ const Home = () => {
           </div>
 
           <div className={`w-full   ${menu ? "flex" : "lg:flex hidden"}`}>
-            <Menu />
+            <Menu setMenu={setMenu} />
           </div>
 
           <h1 className="text-white md:text-[30px]">
@@ -163,9 +163,7 @@ const Home = () => {
             />
           </span>
           <div className="flex flex-col">
-            <h1 className="text-green font-bold text-[30px]">
-              Vision
-            </h1>
+            <h1 className="text-green font-bold text-[30px]">Vision</h1>
             <p className="font-bold">
               To establish a dynamic virtual space that transcends geographical
               boundaries, enabling seamless communication and collaboration thus

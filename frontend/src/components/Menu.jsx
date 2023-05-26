@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import { Link } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ setMenu }) => {
   const [depMenu, setDepMenu] = useState(false);
   const [staffMenu, setStaffMenu] = useState(false);
   const [wardMenu, setWardMenu] = useState(false);
@@ -36,16 +35,23 @@ const Menu = () => {
       setWardMenu(false);
     }
   };
+  const handleHome = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt h-[100vh] lg:mt-0 mt-[-10px] ">
+    <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt lg:h-full h-[100vh] lg:mt-0 mt-[-10px] ">
       <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold  w-full ">
-        <li className="font-bold text-[30px]">
-          <Link to="#home">HOME</Link>
+        <li className="font-bold text-[30px] cursor-pointer">
+          <a href="#home" onClick={() => setMenu(false)}>
+            Home
+          </a>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li className="flex ">About </li>
+        <li className="flex " onClick={() => setMenu(false)}>
+          <a href="#about">About</a>
+        </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
@@ -54,7 +60,9 @@ const Menu = () => {
           className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full  items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
-            Departments
+            <a href="#deps" onClick={() => setMenu(false)}>
+              Departments
+            </a>
             <div className="flex flex-col relative items-center">
               <span className="text-white bg-green rounded-full">
                 {depMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
@@ -149,7 +157,11 @@ const Menu = () => {
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
-        <li>Contacts</li>
+        <li>
+          <a href="#contacts" onClick={() => setMenu(false)}>
+            Contacts
+          </a>
+        </li>
       </ul>
     </div>
   );
