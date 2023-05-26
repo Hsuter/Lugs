@@ -55,8 +55,11 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="bg-white items-center flex flex-col ">
-      <div className="bg-green w-full items-center flex flex-col justify-center fixed z-20 top-0">
+    <div className="bg-white items-center flex flex-col">
+      <div
+        className="bg-green w-full items-center flex flex-col justify-center fixed z-20 top-0"
+        id="home"
+      >
         <div className="py-2 w-full flex flex-col items-center ">
           <div
             className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
@@ -101,7 +104,10 @@ const Home = () => {
         />
       </div>
       {/*About*/}
-      <div className="flex flex-col w-full bg-white gap-2 md:gap-10 mt-2 md:mt-28">
+      <div
+        className="flex flex-col w-full bg-white gap-2 md:gap-10 mt-2 md:mt-28"
+        id="about"
+      >
         <div className="flex flex-row gap-2 w-full ">
           <h1 className="bg-green w-full with-slanted-edge-right p-1 md:p-6 flex items-center justify-center md:text-[30px] text-white font-bold">
             About Constituency
@@ -135,15 +141,11 @@ const Home = () => {
         </div>
         <div className="flex md:flex-row flex-col mx-2  md:mx-10 gap-10">
           <div className="flex flex-col">
-            <h1 className="text-green font-bold underline text-[30px]">
-              Mantra
-            </h1>
+            <h1 className="text-green font-bold text-[30px]">Mantra</h1>
             <p className="font-bold">
               Lugari Constituency, a centre of excellence under 4G network.
             </p>
-            <h1 className="text-green font-bold underline text-[30px]">
-              Mission
-            </h1>
+            <h1 className="text-green font-bold text-[30px]">Mission</h1>
             <p className="font-bold">
               To serve as a comprehensive online platform that fosters
               communication, accessibility, and community engagement. We aim to
@@ -214,7 +216,7 @@ const Home = () => {
               ensuring transparency and accountability in governance...
             </p>
             <button className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10">
-              <VisibilityIcon />{" "}
+              <VisibilityIcon />
               <img src={whiteline} className="w-[1px] py-[4px]" />
               ABOUT MP
             </button>
@@ -233,7 +235,7 @@ const Home = () => {
       </div>
 
       {/*Departments*/}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full" id="deps">
         <div className="flex flex-row  w-full">
           <h1 className="md:text-[30px] font-bold bg-green w-full text-white flex flex-row items-center justify-center  md:py-5">
             Constituency Services / Departments
@@ -251,7 +253,7 @@ const Home = () => {
       </div>
 
       {/*News and speeches*/}
-      <div className="flex flex-col w-full mt-10 ">
+      <div className="flex flex-col w-full mt-10 " id="speeches">
         <div className="flex md:flex-row  w-full">
           <h1 className="md:text-[30px] font-bold bg-green w-full text-white flex flex-row items-center justify-center py-5">
             News $ Speeches
@@ -271,7 +273,12 @@ const Home = () => {
           <div className="bg-orange w-full h-[20px]"></div>
         </div>
       </div>
-      <div className="flex flex-col w-full bg-green items-center footertxt">
+
+      {/* Contacts*/}
+      <div
+        className="flex flex-col w-full bg-green items-center footertxt"
+        id="contacts"
+      >
         <div className="flex lg:flex-row flex-col bg-green gap-8  justify-around items-center ">
           <div className="flex flex-col bg-gray-500 text-blackdark font-bold justify-center  items-center gap-2 pt-4 ">
             <h1>OFFICIAL CONTACTS</h1>

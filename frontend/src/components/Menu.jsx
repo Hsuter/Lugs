@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [depMenu, setDepMenu] = useState(false);
@@ -36,9 +37,11 @@ const Menu = () => {
     }
   };
   return (
-    <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt ">
-      <ul className="flex lg:flex-row flex-col gap-10 items-center justify-center text-[20px] text-green font-semibold  w-full ">
-        <li className="font-bold text-[30px]">HOME</li>
+    <div className="bg-white flex flex-row items-center justify-center w-full lg:px-28 menuTxt h-[100vh] lg:mt-0 mt-[-10px] ">
+      <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold  w-full ">
+        <li className="font-bold text-[30px]">
+          <Link to="#home">HOME</Link>
+        </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
