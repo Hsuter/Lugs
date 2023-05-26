@@ -239,6 +239,9 @@ const Menu = ({ setMenu }) => {
             <li className="border-b-2 border-green w-full  flex justify-center p-1">
               Lumakanda
             </li>
+            <li className="border-b-2 border-green w-full  flex justify-center p-1">
+              Lugari
+            </li>
             <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Lwandeti
             </li>

@@ -5,7 +5,6 @@ import { mp } from "../assets";
 const ProfileCard = () => {
   const location = useLocation();
   const profile = location.state?.profile;
-  console.log(profile);
 
   return (
     <div className="flex w-full lg:pt-20 items-center justify-center">
