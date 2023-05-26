@@ -11,11 +11,11 @@ import {
   harvest2,
 } from "../assets";
 import { Link } from "react-router-dom";
-
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DepsCard from "../components/DepsCard";
 import { useEffect } from "react";
 import NewsCard from "../components/NewsCard";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 const Home = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -59,13 +59,12 @@ const Home = () => {
       </div>
       {/*About*/}
       <div
-        className="flex flex-col w-full bg-white gap-2 md:gap-6 mt-2 md:py-10"
+        className="flex flex-col w-full bg-white gap-2 md:gap-6 mt-2 md:py-10 py-4"
         id="about"
       >
         <div className="flex flex-row w-full  justify-center ">
-          <h1 className="flex-col text-green  with-slanted-edge-right md:p-6 flex items-center justify-center md:text-[30px] font-bold">
+          <h1 className="flex-col text-green  with-slanted-edge-right md:p-6 flex items-center justify-center md:text-[30px] text-[25px] font-bold">
             About Constituency
-            
           </h1>
         </div>
         <p className="about px-2 md:px-14 ">
@@ -133,11 +132,11 @@ const Home = () => {
       </div>
 
       {/*Mp*/}
-      <div className="flex flex-col w-full bg-gray-100 py-10">
+      <div className="flex flex-col w-full bg-gray-100 lg:py-10">
         <div className="flex md:flex-row flex-col  gap-10 md:mt-20  ">
           <div className="flex flex-col items-center  md:max-w-[60vw]">
             <div className="flex flex-col items-center">
-              <h1 className="text-green font-bold  text-[30px] mt-20">
+              <h1 className="text-green font-bold  md:text-[30px] text-[25px] lg:mt-20 mt-10">
                 Mp's Welcome Note
               </h1>
               <div className="flex flex-row w-full gap-1">
@@ -145,21 +144,27 @@ const Home = () => {
                 <div className="bg-orange h-[10px] w-full"></div>
               </div>
             </div>
+            <div className="mx-2 md:mx-10 md:mt-20 mt-4 flex flex-row  relative">
+              <div className=" flex-row flex">
+                <p className="leading-9">
+                  <span className="text-[30px]">"</span>Welcome to Lugari
+                  Constituency Website, a platform dedicated to fostering
+                  engagement, Connectivity, Communication and progress of our
+                  Constituency and engaging with our community. We are excited
+                  to share with you the objectives, and goals of this website.
+                  First and foremost, Lugari Constituency website serves as a
+                  vital hub for our constituency subjects. It offers a seamless
+                  and accessible channel for constituents to stay informed about
+                  The MP's initiatives, programmes, activities, itinerary,
+                  progress, policies, and development projects. Here, you will
+                  and comprehensive information about the services we provide
+                  and progress. Our aim is to empower our subjects with
+                  knowledge, ensuring transparency and accountability in
+                  governance... <span className="text-[30px]">"</span>
+                </p>
+              </div>
+            </div>
 
-            <p className="font-bold mx-2 md:mx-10 md:mt-20 mt-4">
-              Welcome to Lugari Constituency Website, a platform dedicated to
-              fostering engagement, Connectivity, Communication and progress of
-              our Constituency and engaging with our community. We are excited
-              to share with you the objectives, and goals of this website. First
-              and foremost, Lugari Constituency website serves as a vital hub
-              for our constituency subjects. It offers a seamless and accessible
-              channel for constituents to stay informed about The MP's
-              initiatives, programmes, activities, itinerary, progress,
-              policies, and development projects. Here, you will and
-              comprehensive information about the services we provide and
-              progress . Our aim is to empower our subjects with knowledge,
-              ensuring transparency and accountability in governance...
-            </p>
             <button className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10">
               <VisibilityIcon />
               <img src={whiteline} className="w-[1px] py-[4px]" />
@@ -182,9 +187,9 @@ const Home = () => {
       </div>
 
       {/*Departments*/}
-      <div className="flex flex-col w-full" id="deps">
+      <div className="flex flex-col w-full my-5" id="deps">
         <div className="flex flex-row  w-full">
-          <h1 className=" md:text-[30px] font-bold text-green w-full  flex flex-row md:py-5 pl-10">
+          <h1 className="md:text-[30px] text-[25px] font-bold text-green w-full  flex flex-row md:py-5 pl-10">
             Constituency Services / Departments
           </h1>
         </div>
@@ -199,12 +204,14 @@ const Home = () => {
       </div>
 
       {/*News and speeches*/}
-      <div className="flex flex-col w-full mt-10 bg-gray-100 py-10 " id="speeches">
+      <div
+        className="flex flex-col w-full mt-10 bg-gray-100 py-10 "
+        id="speeches"
+      >
         <div className="flex md:flex-row  w-full">
           <h1 className="md:text-[30px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
             News $ Speeches
           </h1>
-          
         </div>
         <div className="flex flex-row flex-wrap mt-8 items-center justify-center">
           <div className="flex flex-row flex-wrap items-center justify-center mx-20 gap-10 ">

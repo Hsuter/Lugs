@@ -4,7 +4,7 @@ const DepsCard = ({ dep }) => {
   const { image, name } = dep;
 
   return (
-    <div className="flex flex-col  items-center bg-orange md:w-[400px] w-[300px] h-[450px] ">
+    <div className="flex flex-col  items-center bg-orange md:w-[400px] w-[300px] h-[450px] txtalign ">
       <img
         src={image}
         alt={name}

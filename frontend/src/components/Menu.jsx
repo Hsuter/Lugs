@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { ScrollContext } from "../ScrollContext";
 
 const Menu = ({ setMenu }) => {
+  const scrolls = useContext(ScrollContext);
+
   const [profile, setProfile] = useState("");
   const navigate = useNavigate();
   const [depMenu, setDepMenu] = useState(false);
   const [staffMenu, setStaffMenu] = useState(false);
   const [wardMenu, setWardMenu] = useState(false);
-
-  console.log(profile);
 
   const handleDepMenu = () => {
     if (!depMenu) {
@@ -75,10 +76,13 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleStaffMenu}
-          className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
-          on
+          onMouseEnter={handleStaffMenu}
+          onMouseLeave={handleStaffMenu}
+          className={`flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center hover:${handleStaffMenu}`}
         >
-          <div className="flex  w-[150px] flex-row gap-2  items-center justify-center">
+          <div
+            className={`flex  w-[150px] flex-row gap-2  items-center justify-center`}
+          >
             <a
               href="#about"
               onClick={() => {
@@ -139,6 +143,8 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleDepMenu}
+          onMouseEnter={handleDepMenu}
+          onMouseLeave={handleDepMenu}
           className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full  items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
@@ -173,6 +179,8 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleWardMenu}
+          onMouseEnter={handleWardMenu}
+          onMouseLeave={handleWardMenu}
           className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
