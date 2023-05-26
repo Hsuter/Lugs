@@ -46,6 +46,43 @@ const Menu = ({ setMenu }) => {
     window.scrollTo(0, 0);
   };
 
+  const handleDepMenuEnter = () => {
+    setDepMenu(true);
+    setStaffMenu(false);
+    setWardMenu(false);
+  };
+
+  const handleDepMenuLeave = () => {
+    setTimeout(() => {
+      setDepMenu(false);
+    }, 300);
+  };
+
+  const handleStaffMenuEnter = () => {
+    setStaffMenu(true);
+    setDepMenu(false);
+    setWardMenu(false);
+  };
+
+  const handleStaffMenuLeave = () => {
+    // Delay hiding the menu to allow moving the cursor to the sub-menu
+    setTimeout(() => {
+      setStaffMenu(false);
+    }, 300);
+  };
+
+  const handleWardMenuEnter = () => {
+    setWardMenu(true);
+    setDepMenu(false);
+    setStaffMenu(false);
+  };
+
+  const handleWardMenuLeave = () => {
+    setTimeout(() => {
+      setWardMenu(false);
+    }, 300);
+  };
+
   useEffect(() => {
     if (profile == "") {
       null;
@@ -76,8 +113,8 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleStaffMenu}
-          onMouseEnter={handleStaffMenu}
-          onMouseLeave={handleStaffMenu}
+          onMouseEnter={handleStaffMenuEnter}
+          onMouseLeave={handleStaffMenuLeave}
           className={`flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center hover:${handleStaffMenu}`}
         >
           <div
@@ -143,8 +180,8 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleDepMenu}
-          onMouseEnter={handleDepMenu}
-          onMouseLeave={handleDepMenu}
+          onMouseEnter={handleDepMenuEnter}
+          onMouseLeave={handleDepMenuLeave}
           className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full  items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
@@ -179,8 +216,8 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleWardMenu}
-          onMouseEnter={handleWardMenu}
-          onMouseLeave={handleWardMenu}
+          onMouseEnter={handleWardMenuEnter}
+          onMouseLeave={handleWardMenuLeave}
           className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
