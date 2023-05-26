@@ -3,7 +3,7 @@ import finance from "./finance.jpg";
 import harvest from "./bunner.png";
 import office from "./office.jpg";
 import roads from "./roads.jpg";
-import sports from "./sports.jpg";
+import saspeech from "./s_a_speech.jpg";
 import line from "./line.png";
 import bunnerText from "./bunnerText.png";
 import coarms from "./coarms.png";
@@ -26,7 +26,7 @@ const deps = [
 const news = [
   {
     news1: {
-      image: constr,
+      image: saspeech,
       title: "Inaugural education stakeholder's conference",
       location:
         "Salvation Army Hall - The salvation army officers training college",

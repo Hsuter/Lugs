@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import {
   harvest,
   coarms,
@@ -11,35 +11,15 @@ import {
   harvest2,
 } from "../assets";
 import { Link } from "react-router-dom";
-import Menu from "../components/Menu";
+
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DepsCard from "../components/DepsCard";
 import { useEffect } from "react";
 import NewsCard from "../components/NewsCard";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 
 const Home = () => {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCJmdTt_xN84L9bGmp2gVxP6ivrM0c2OEc",
-  });
-
-  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
-
   const [menu, setMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  const handleMenu = () => {
-    if (!menu) {
-      setMenu(true);
-    } else {
-      setMenu(false);
-    }
-  };
 
   // Replace with your desired longitude
 
@@ -56,31 +36,6 @@ const Home = () => {
   }, []);
   return (
     <div className="bg-white items-center flex flex-col" id="home">
-      <div
-        className="bg-green w-full items-center flex flex-col justify-center fixed z-20 top-0"
-        id="home"
-      >
-        <div className="py-2 w-full flex flex-col items-center ">
-          <div
-            className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
-            onClick={handleMenu}
-          >
-            {menu ? (
-              <CloseIcon className=" text-black " />
-            ) : (
-              <MenuIcon className=" text-black " />
-            )}
-          </div>
-
-          <div className={`w-full   ${menu ? "flex" : "lg:flex hidden"}`}>
-            <Menu setMenu={setMenu} />
-          </div>
-
-          <h1 className="text-white md:text-[30px]">
-            Welcome to Lugari Constituency
-          </h1>
-        </div>
-      </div>
       <div className="flex flex-col items-center relative bg-black ">
         <img
           src={harvest}
@@ -219,13 +174,16 @@ const Home = () => {
               ABOUT MP
             </button>
           </div>
-          <div className="flex flex-col items-center justify-center mx-6 ">
-            <div className="">
+          <div className="flex flex-col items-center justify-center mx-6 mpname">
+            <div className=" flex flex-col items-center">
               <img
                 src={mp}
                 alt="Mp lugari"
                 className="rounded-3xl border-2 border-green w-[300px]"
               />
+              <p className="font-bold mt-10 text-[25px] text-green">
+                HON. Nabweri Daraja Nabii, BGJ,MP
+              </p>
             </div>
           </div>
         </div>
@@ -273,59 +231,6 @@ const Home = () => {
       </div>
 
       {/* Contacts*/}
-      <div
-        className="flex flex-col w-full bg-green items-center footertxt"
-        id="contacts"
-      >
-        <div className="flex lg:flex-row flex-col bg-green gap-8  justify-around items-center ">
-          <div className="flex flex-col bg-gray-500 text-blackdark font-bold justify-center  items-center gap-2 pt-4 ">
-            <h1>OFFICIAL CONTACTS</h1>
-            <p>
-              <WhatsAppIcon />
-              0702600436
-            </p>
-            <p>
-              <LocalPhoneIcon /> 0733608860
-            </p>
-            <p>
-              <EmailIcon />
-              info@lugariconstituency.go.ke
-            </p>
-            <img src={coarms} alt="coart_of_arms" className="w-[300px]" />
-          </div>
-          <div className="flex flex-col text-white  items-center list-none w-full ">
-            <h1 className="text-[30px]">Services</h1>
-            <li className="hover:text-blue-600 cursor-pointer">Busary Forms</li>
-            <li className="hover:text-blue-600 cursor-pointer">Careers</li>
-            <li className="hover:text-blue-600 cursor-pointer">
-              Tenders & Notices
-            </li>
-            <li className="hover:text-blue-600 cursor-pointer">
-              Emergency Services
-            </li>
-            <li className="hover:text-blue-600 cursor-pointer">Downloads</li>
-            <li className="hover:text-blue-600 cursor-pointer">
-              FAQs & Help Desks
-            </li>
-          </div>
-          <div>
-            {isLoaded ? (
-              <div>
-                <GoogleMap
-                  zoom={10}
-                  center={center}
-                  mapContainerClassName="map-container"
-                >
-                  <MarkerF position={center} />
-                </GoogleMap>
-              </div>
-            ) : (
-              <p>loading</p>
-            )}
-          </div>
-        </div>
-        <p>Copyright © 2023 Constituency of Lugari . All Rights Reserved.</p>
-      </div>
     </div>
   );
 };

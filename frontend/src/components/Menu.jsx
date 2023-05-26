@@ -75,13 +75,13 @@ const Menu = ({ setMenu }) => {
               depMenu ? "flex" : "hidden"
             } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
           >
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Education, ICT & Public communication
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green  w-full p-1 flex justify-center">
               Finance and economic planning
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Infrastructure
             </li>
           </div>
@@ -107,16 +107,16 @@ const Menu = ({ setMenu }) => {
               wardMenu ? "flex" : "hidden"
             } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full  `}
           >
-            <li className="border-2 w-full  flex justify-center p-1">
+            <li className="border-b-2 border-green w-full  flex justify-center p-1">
               Lumakanda
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Lwandeti
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Chekalini
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
               Chevaywaand
             </li>
           </div>
@@ -142,11 +142,14 @@ const Menu = ({ setMenu }) => {
               staffMenu ? "flex" : "hidden"
             } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full `}
           >
-            <li className="border-2 w-full  flex justify-center p-1">
+            <li className="border-b-2 border-green w-full  flex justify-center p-1">
               Member of parliament
             </li>
-            <li className="border-2 w-full p-1 flex justify-center">
-              Communication Director
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+              Constituency Office Manager
+            </li>
+            <li className="border-b-2 border-green w-full p-1 flex justify-center">
+              Deputy Constituency Manager
             </li>
           </div>
         </li>
