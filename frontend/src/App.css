@@ -60,3 +60,8 @@
   transform: scaleX(0);
   transform-origin: left;
 }
+
+.itms{
+  display: flex !important;
+  flex-direction: col !important;
+}

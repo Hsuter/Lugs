@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProfileCard from "./pages/ProfileCard";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import KenyanNews from "./components/KenyanNews";
+
 
 function App() {
   return (
@@ -31,6 +32,18 @@ function App() {
                 <div className="flex flex-col">
                   <Navbar />
                   <ProfileCard />
+                  <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/news"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Navbar />
+                  <KenyanNews />
                   <Footer />
                 </div>
               </>

@@ -3,7 +3,6 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 
 const Menu = ({ setMenu }) => {
