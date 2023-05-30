@@ -35,10 +35,13 @@ const Footer = () => {
         <div className="flex flex-col text-white  items-center list-none gap-3 justify-center">
           <h1 className="text-[30px]">Services</h1>
           <li className="hover:text-blue-600 cursor-pointer">
-            <a href="https://lugari.ngcdf.go.ke/downloads/" >Busary Forms</a>
+            <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank">
+              Busary Forms
+            </a>
           </li>
           <li className="hover:text-blue-600 cursor-pointer">Careers</li>
           <li className="hover:text-blue-600 cursor-pointer">
+            <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank"></a>
             Tenders & Notices
           </li>
           <li className="hover:text-blue-600 cursor-pointer">

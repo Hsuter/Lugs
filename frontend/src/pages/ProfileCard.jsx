@@ -160,7 +160,7 @@ const ProfileCard = () => {
               </div>
             </div>
           </div>
-          <div className="mx-10 mb-10">
+          <div className="mx-4 mb-10">
             <h1 className="text-green text-[30px] items-center justify-center underline-motion">
               Welcome Note
             </h1>
@@ -227,7 +227,7 @@ const ProfileCard = () => {
           <div className="w-[300px] lg:w-[800px] md:ml-0 ml-[-20px] cursor-pointer flex flex-col my-2 ">
             <div className="flex flex-col md:text-[15px] text-[12px] ">
               <h1
-                className=" text-green hover:border-green py-5 border-2 px-2 "
+                className=" text-green hover:border-green py-5 border-2 px-2 w-full "
                 onClick={handleEdMenu}
               >
                 Education Background{" "}
@@ -245,7 +245,7 @@ const ProfileCard = () => {
                     <th className="py-2 px-4 bg-gray-100">From</th>
                     <th className="py-2 px-4 bg-gray-100">To</th>
                     <th className="py-2 px-4 bg-gray-100">Institution</th>
-                    <th className="py-2 px-4 bg-gray-100">Qualification</th>
+                    <th className="py-2 lg:px-48 bg-gray-100">Qualification</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200 ">
@@ -262,7 +262,7 @@ const ProfileCard = () => {
             </div>
             <div className="flex flex-col md:text-[15px] text-[12px] ">
               <h1
-                className=" text-green hover:border-green   w-full py-5 border-2 px-2"
+                className=" text-green hover:border-green   w-full py-5 border-2 px-2 "
                 onClick={handleEmpMenu}
               >
                 Employment History{" "}
@@ -280,7 +280,7 @@ const ProfileCard = () => {
                     <th className="py-2 px-4 bg-gray-100">From</th>
                     <th className="py-2 px-4 bg-gray-100">To</th>
                     <th className="py-2 px-4 bg-gray-100">Employer</th>
-                    <th className="py-2 px-4 bg-gray-100">Position Held</th>
+                    <th className="py-2 lg:px-60 bg-gray-100">Position Held</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -295,6 +295,22 @@ const ProfileCard = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          <div className="flex flex-col  py-10 px-2">
+            <h1 className="font-bold">Professional Affiliations: </h1>
+            <li>Institute of Human Resource Management of Kenya–Member</li>
+            <li>Society of Human Resource Management, USA- Member</li>
+            <h1 className="font-bold">Special Skill(s): </h1>
+            <li>BSC Designer</li>
+            <li>Performance Management Assessment tool implementer</li>
+            <li>Strategic Evolution and Development</li>
+            <h1 className="font-bold">Area(s) of Interest:</h1>
+            <p>
+              Internal Security; Energy Sector; Agriculture; Transport and
+              Infrastructure; counseling; research; participation in Community
+              activities.
+            </p>
           </div>
         </div>
       ) : profile == "COM" ? (

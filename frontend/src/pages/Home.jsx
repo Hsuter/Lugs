@@ -82,11 +82,12 @@ const Home = () => {
           constituencies in Kenya . It is one of the 12 constituencies of
           Kakamega County. It comprises of 6 County Assembly wards namely:{" "}
           <span className="text-blue-600">
-            <Link> Lugari</Link>
+            <Link> Lugari </Link>
             <Link>Lumakanda,</Link>
             <Link> Lwandeti,</Link>
             <Link> Chekalini,</Link>
-            <Link> Chevaywaand.</Link>
+            <Link> Chevaywaand</Link>{""}and{""}
+            <Link> Mautuma.</Link>
           </span>
           The entire constituency is located within the Lumakanda County Council
           area. The constituency has an area of 367.1 km². It was retained its
