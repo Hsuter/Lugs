@@ -12,8 +12,8 @@ import constr from "./constr.jpg";
 import whiteline from "./whiteline.png";
 import harvest2 from "./harvest.jpg";
 import bursary from "./bursary.jpg";
-import CM from "./CM.JPG";
-import DCM from "./DCM.JPG";
+import CM from "./CM.jpg";
+import DCM from "./DCM.jpg";
 
 const deps = [
   {
