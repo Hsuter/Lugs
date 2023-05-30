@@ -46,18 +46,6 @@ const Menu = ({ setMenu }) => {
     window.scrollTo(0, 0);
   };
 
-  const handleDepMenuEnter = () => {
-    setDepMenu(true);
-    setStaffMenu(false);
-    setWardMenu(false);
-  };
-
-  const handleDepMenuLeave = () => {
-    setTimeout(() => {
-      setDepMenu(false);
-    }, 3000);
-  };
-
   const handleStaffMenuEnter = () => {
     setStaffMenu(true);
     setDepMenu(false);
@@ -68,19 +56,7 @@ const Menu = ({ setMenu }) => {
     // Delay hiding the menu to allow moving the cursor to the sub-menu
     setTimeout(() => {
       setStaffMenu(false);
-    }, 3000);
-  };
-
-  const handleWardMenuEnter = () => {
-    setWardMenu(true);
-    setDepMenu(false);
-    setStaffMenu(false);
-  };
-
-  const handleWardMenuLeave = () => {
-    setTimeout(() => {
-      setWardMenu(false);
-    }, 3000);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -96,7 +72,6 @@ const Menu = ({ setMenu }) => {
       <ul className="flex lg:flex-row flex-col lg:gap-10 gap-4  items-center justify-center text-[20px] text-green font-semibold   py-2 ">
         <li className="font-bold  cursor-pointer">
           <a
-            href="#homee"
             onClick={() => {
               setMenu(false);
               handleHome();
@@ -188,35 +163,12 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleDepMenu}
-          onMouseEnter={handleDepMenuEnter}
-          onMouseLeave={handleDepMenuLeave}
           className="flex lg:flex-row flex-col gap-2 cursor-pointer w-full  items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
             <a href="#deps" onClick={() => setMenu(false)}>
               Departments
             </a>
-            <div className="flex flex-col relative items-center">
-              <span className="text-green ">
-                {depMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
-              </span>
-            </div>
-          </div>
-
-          <div
-            className={`${
-              depMenu ? "flex" : "hidden"
-            } flex-col items-pnter justify-center lg:bg-gray-200 relative lg:absolute lg:ml-[-80px] lg:mt-44 lg:w-[500px] w-full`}
-          >
-            <p className="border-b-2 border-green w-full p-1 flex justify-center">
-              Education, ICT & Public communication
-            </p>
-            <p className="border-b-2 border-green  w-full p-1 flex justify-center">
-              Finance and economic planning
-            </p>
-            <p className="border-b-2 border-green w-full p-1 flex justify-center">
-              Infrastructure
-            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
@@ -224,49 +176,16 @@ const Menu = ({ setMenu }) => {
         </span>
         <li
           onClick={handleWardMenu}
-          onMouseEnter={handleWardMenuEnter}
-          onMouseLeave={handleWardMenuLeave}
           className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
             Wards
-            <div className="flex flex-col relative items-center  ">
-              <span className="text-green">
-                {wardMenu ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
-              </span>
-            </div>
-          </div>
-
-          <div
-            className={`${
-              wardMenu ? "flex" : "hidden"
-            } flex-col items-center justify-center lg:bg-gray-200 relative lg:absolute lg:mt-10   lg:w-[300px] w-full  `}
-          >
-            <p className="border-b-2 border-green w-full  flex justify-center p-1">
-              Lumakanda
-            </p>
-            <p className="border-b-2 border-green w-full  flex justify-center p-1">
-              Lugari
-            </p>
-            <p className="border-b-2 border-green w-full p-1 flex justify-center">
-              Lwandeti
-            </p>
-            <p className="border-b-2 border-green w-full p-1 flex justify-center">
-              Chekalini
-            </p>
-            <p className="border-b-2 border-green w-full p-1 flex justify-center">
-              Chevaywaand
-            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
 
-        <li>Career</li>
-        <span className="lg:rotate-0 rotate-90">
-          <img src={line} className="w-[2px] h-[30px]" />
-        </span>
         <li>
           <a href="#contacts" onClick={() => setMenu(false)}>
             Contacts

@@ -18,7 +18,6 @@ import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 
-
 const Home = () => {
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
@@ -201,7 +200,7 @@ const Home = () => {
                 className="rounded-3xl border-2 border-green w-[300px]"
               />
               <p className="font-bold mt-10 text-[25px] text-green">
-                HON. Nabweri Daraja Nabii, BGJ,MP
+                HON. Nabwera Daraja Nabii, BGJ,MP
               </p>
             </div>
           </div>
