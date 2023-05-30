@@ -41,13 +41,20 @@ const Footer = () => {
           </li>
           <li className="hover:text-blue-600 cursor-pointer">Careers</li>
           <li className="hover:text-blue-600 cursor-pointer">
-            <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank"></a>
-            Tenders & Notices
+            <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank">
+              {" "}
+              Tenders & Notices
+            </a>
           </li>
           <li className="hover:text-blue-600 cursor-pointer">
             Emergency Services
           </li>
-          <li className="hover:text-blue-600 cursor-pointer">Downloads</li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank">
+              {" "}
+              Downloads
+            </a>
+          </li>
           <li className="hover:text-blue-600 cursor-pointer">
             FAQs & Help Desks
           </li>
