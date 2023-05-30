@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProfileCard from "./pages/ProfileCard";
 import KenyanNews from "./components/KenyanNews";
-
+import Wards from "./pages/Wards";
 
 function App() {
   return (
@@ -44,6 +44,18 @@ function App() {
                 <div className="flex flex-col">
                   <Navbar />
                   <KenyanNews />
+                  <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/wards"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Navbar />
+                  <Wards />
                   <Footer />
                 </div>
               </>

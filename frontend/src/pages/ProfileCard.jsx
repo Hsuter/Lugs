@@ -1,11 +1,129 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { mp, CM, DCM } from "../assets";
 import { ScrollContext } from "../ScrollContext";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 
 const ProfileCard = () => {
   const scrolls = useContext(ScrollContext);
   const { profile } = scrolls;
+  const [edu, setEdu] = useState(false);
+  const [emp, setEmp] = useState(false);
+
+  const handleEdMenu = () => {
+    if (!edu) {
+      setEdu(true);
+      setEmp(false);
+    } else {
+      setEdu(false);
+    }
+  };
+  const handleEmpMenu = () => {
+    if (!emp) {
+      setEmp(true);
+      setEdu(false);
+    } else {
+      setEmp(false);
+    }
+  };
+
+  const mpEduc = [
+    {
+      from: "1996",
+      to: "1997",
+      institution: "TUC",
+      qualification: "Post Graduate Diploma in Human Resource Management",
+    },
+    {
+      from: "1988",
+      to: "1992",
+      institution: "Moi University",
+      qualification: "Bachelor of Arts, Second Class Honors (Upper Division)",
+    },
+    {
+      from: "2001",
+      to: "",
+      institution: "ILO Centre- Geneva",
+      qualification:
+        "Post Graduate in Organization Development and Change Management",
+    },
+    {
+      from: "1986",
+      to: "1987",
+      institution: "Musingu",
+      qualification: "KACE",
+    },
+    {
+      from: "1982",
+      to: "1985",
+      institution: "Kivaywa",
+      qualification: "KCE",
+    },
+    {
+      from: "1974",
+      to: "1981",
+      institution: "Mugunga Primary School",
+      qualification: "Kenya Certificate of Primary Education",
+    },
+  ];
+
+  const mpEmpHist = [
+    {
+      from: "2013",
+      to: "2017",
+      employer: "County Government of Kakamega",
+      position: "Chief of Staff/Advisor",
+    },
+    {
+      from: "2020",
+      to: "2022",
+      employer: "County Government of Kakamega",
+      position: "Chief Officer, Livestock and Veterinary Services",
+    },
+    {
+      from: "2020",
+      to: "2018",
+      employer: "Council of Governors",
+      position: "County and Parliamentary Liaison Services",
+    },
+    {
+      from: "2008",
+      to: "2012",
+      employer: "Kenya Bureau of Standards",
+      position: "Consultant",
+    },
+    {
+      from: "2006",
+      to: "2008",
+      employer: "Insteel Limited",
+      position: "Human Resource Manager",
+    },
+    {
+      from: "2005",
+      to: "",
+      employer: "Delmonte (K) Limited",
+      position: "Human Resource Manager",
+    },
+    {
+      from: "2004",
+      to: "2005",
+      employer: "Coca Cola, Rift Valley",
+      position: "Human Resource Manager",
+    },
+    {
+      from: "1999",
+      to: "2004",
+      employer: "South Nyanza Sugar Company Limited",
+      position: "Employee Relations Manager",
+    },
+    {
+      from: "1992",
+      to: "1999",
+      employer: "Kenya Broadcasting Corporation",
+      position: "Personnel Manager",
+    },
+  ];
 
   return (
     <div className="flex w-full  items-center  justify-center">
@@ -26,10 +144,11 @@ const ProfileCard = () => {
                 </h1>
                 <p className="w-full text-green">Member of parliament</p>
                 <p>
-                  His excellency Nabwera Daraja Nabii was elected the Memeber of
-                  Lugari Constituency during the Kenyan General Elections on 9th
-                  August 2022. He assumed office on 25th August after taking the
-                  oath of office.
+                  Honourable Nabwera Daraja Nabii was elected the Memeber of
+                  parliament for Lugari Constituency during the Kenyan General
+                  Elections on 9th August 2022. He assumed office on 16th August
+                  after taking the oath of office. He serves in the Committees
+                  of Education and research; and the Public Accounts Committee.
                 </p>
 
                 <p className="font-bold">
@@ -101,9 +220,81 @@ const ProfileCard = () => {
               explore and engage with us on this platform, as together, we
               strive towards a brighter future for our constituency.{" "}
               <span className="text-green">
-                Hon Nabwera Daraja Nabii, BGJ, MP Communications Director.
+                Hon Nabwera Daraja Nabii, BGJ, MP Communications Director.
               </span>
             </p>
+          </div>
+          <div className="w-[300px] lg:w-[800px] md:ml-0 ml-[-20px] cursor-pointer flex flex-col my-2 ">
+            <div className="flex flex-col md:text-[15px] text-[12px] ">
+              <h1
+                className=" text-green hover:border-green py-5 border-2 px-2 "
+                onClick={handleEdMenu}
+              >
+                Education Background{" "}
+                <span className="flex float-right">
+                  {edu ? <RemoveIcon /> : <AddIcon />}
+                </span>
+              </h1>
+              <table
+                className={`${
+                  edu ? "flex  flex-col " : "hidden"
+                }  divide-y divide-gray-200 `}
+              >
+                <thead>
+                  <tr>
+                    <th className="py-2 px-4 bg-gray-100">From</th>
+                    <th className="py-2 px-4 bg-gray-100">To</th>
+                    <th className="py-2 px-4 bg-gray-100">Institution</th>
+                    <th className="py-2 px-4 bg-gray-100">Qualification</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200 ">
+                  {mpEduc.map((item, index) => (
+                    <tr key={index}>
+                      <td className="py-2 px-4">{item.from}</td>
+                      <td className="py-2 px-4">{item.to}</td>
+                      <td className="py-2 px-4">{item.institution}</td>
+                      <td className="py-2 px-4">{item.qualification}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="flex flex-col md:text-[15px] text-[12px] ">
+              <h1
+                className=" text-green hover:border-green   w-full py-5 border-2 px-2"
+                onClick={handleEmpMenu}
+              >
+                Employment History{" "}
+                <span className="flex float-right">
+                  {emp ? <RemoveIcon /> : <AddIcon />}
+                </span>
+              </h1>
+              <table
+                className={`${
+                  emp ? "flex flex-col flex-wrap" : "hidden"
+                }  divide-y divide-gray-200`}
+              >
+                <thead>
+                  <tr>
+                    <th className="py-2 px-4 bg-gray-100">From</th>
+                    <th className="py-2 px-4 bg-gray-100">To</th>
+                    <th className="py-2 px-4 bg-gray-100">Employer</th>
+                    <th className="py-2 px-4 bg-gray-100">Position Held</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {mpEmpHist.map((item, index) => (
+                    <tr key={index}>
+                      <td className="py-2 px-4">{item.from}</td>
+                      <td className="py-2 px-4">{item.to}</td>
+                      <td className="py-2 px-4">{item.employer}</td>
+                      <td className="py-2 px-4">{item.position}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       ) : profile == "COM" ? (
@@ -137,7 +328,7 @@ const ProfileCard = () => {
             </div>
           </div>
         </div>
-      ) : (
+      ) : profile == "DCM" ? (
         <div className="flex lg:flex-row flex-col items bg-gray-100  w-[800px] my-20 justify-between">
           <div className="flex  items center justify-center ">
             <img
@@ -168,6 +359,8 @@ const ProfileCard = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <></>
       )}
     </div>
   );

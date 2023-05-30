@@ -4,6 +4,7 @@ import { line } from "../assets";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useNavigate } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
+import { Link } from "react-router-dom";
 
 const Menu = ({ setMenu }) => {
   const scrolls = useContext(ScrollContext);
@@ -179,7 +180,16 @@ const Menu = ({ setMenu }) => {
           className="flex :flglex-row flex-col gap-2 cursor-pointer w-full items-center"
         >
           <div className="flex flex-row gap-2 w-full items-center justify-center">
-            Wards
+            <Link
+              to="/wards"
+              onClick={() => {
+                setMenu(false);
+                window.scrollTo(0, 0);
+              }}
+            >
+              {" "}
+              Wards
+            </Link>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">

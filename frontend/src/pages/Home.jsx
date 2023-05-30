@@ -82,6 +82,7 @@ const Home = () => {
           constituencies in Kenya . It is one of the 12 constituencies of
           Kakamega County. It comprises of 6 County Assembly wards namely:{" "}
           <span className="text-blue-600">
+            <Link> Lugari</Link>
             <Link>Lumakanda,</Link>
             <Link> Lwandeti,</Link>
             <Link> Chekalini,</Link>
