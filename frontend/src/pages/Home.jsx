@@ -82,23 +82,65 @@ const Home = () => {
           constituencies in Kenya . It is one of the 12 constituencies of
           Kakamega County. It comprises of 6 County Assembly wards namely:{" "}
           <span className="text-blue-600">
-            <Link> Lugari </Link>
-            <Link>Lumakanda,</Link>
-            <Link> Lwandeti,</Link>
-            <Link> Chekalini,</Link>
-            <Link> Chevaywaand</Link>{""}and{""}
-            <Link> Mautuma.</Link>
+            <Link>
+              {" "}
+              Lugari{" "}
+              <span className="text-black">
+                (Population: 31,381 Area: 81.3km² )
+              </span>
+              {" ,"}
+            </Link>
+            <Link>
+              Lumakanda{" "}
+              <span className="text-black">
+                (Population: 29,955 Area: 59.0km² )
+              </span>
+              {" ,"}
+            </Link>
+            <Link>
+              {" "}
+              Lwandeti{" "}
+              <span className="text-black">
+                (Population: 27,746 Area: 44.2km² )
+              </span>
+              {" ,"}
+            </Link>
+            <Link>
+              {" "}
+              Chekalini{" "}
+              <span className="text-black">
+                (Population: 19,705 Area: 41.7km² )
+              </span>
+              {" ,"}
+            </Link>
+            <Link>
+              {" "}
+              Chevaywaand{" "}
+              <span className="text-black">
+                (Population: 33,145 Area: 57.0km² )
+              </span>
+              {" ,"}
+            </Link>{" "}
+            <span className="text-black">{""}and</span>
+            <Link>
+              {" "}
+              Mautuma
+              <span className="text-black">
+                (Population: 25,082 Area: 83.3km² )
+              </span>
+              {" "}.
+            </Link>
           </span>
           The entire constituency is located within the Lumakanda County Council
-          area. The constituency has an area of 367.1 km². It was retained its
-          name when Likuyani constituency was hived from the larger Lugari
-          Constituecny. Lugari constituency borders Uisingishu County an Turbo
-          constituency. Other bodering constituencies in Western region are
-          Malava Costituency, Likuyani constituency, and Webuye West
-          constituency. It's a cosmopolitan constituency hosting more than ten
-          tribes of Kenyans who are primary farmers. Due to its advantage of
-          rains it's a hurb of more food crops ie maize, beans, sugarcane and
-          sweet potatoes.
+          area. The constituency has an area of 367.1 km² and a population of
+          167,014 people. It was retained its name when Likuyani constituency
+          was hived from the larger Lugari Constituecny. Lugari constituency
+          borders Uisingishu County an Turbo constituency. Other bodering
+          constituencies in Western region are Malava Costituency, Likuyani
+          constituency, and Webuye West constituency. It's a cosmopolitan
+          constituency hosting more than ten tribes of Kenyans who are primary
+          farmers. Due to its advantage of rains it's a hurb of more food crops
+          ie maize, beans, sugarcane and sweet potatoes.
         </p>
 
         <div className="flex  flex-col mx-2  md:mx-10 gap-4 mmvtext  ">
