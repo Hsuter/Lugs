@@ -17,6 +17,7 @@ import { useEffect, useContext } from "react";
 import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
+import { gallery } from "../assets";
 
 const Home = () => {
   const scrolls = useContext(ScrollContext);
@@ -29,7 +30,6 @@ const Home = () => {
     setProfile("MP");
     navigate("/staff_profile");
     window.scrollTo(0, 0);
-    console.log("profile", profile);
   };
 
   useEffect(() => {
@@ -127,8 +127,8 @@ const Home = () => {
               Mautuma
               <span className="text-black">
                 (Population: 25,082 Area: 83.3km² )
-              </span>
-              {" "}.
+              </span>{" "}
+              .
             </Link>
           </span>
           The entire constituency is located within the Lumakanda County Council
@@ -286,6 +286,35 @@ const Home = () => {
             })}
           </div>
         </div>
+      </div>
+      <div className="w-full  flex flex-col  items-center gap-10 ">
+        <h1 className="md:text-[30px] underline-motion text-[25px] font-bold  w-full text-green flex flex-row  pl-10 py-5">
+          Gallery
+        </h1>
+        <div className="overflow-x-scroll w-full h-[300px]">
+          <div
+            className="flex flex-row justify-start gap-10"
+            style={{ width: `${gallery.length * 320}px` }}
+          >
+            {gallery.map((image, index) => (
+              <div key={index} className="flex w-[300px] h-[300px]">
+                <img src={image} alt={`Image ${index}`} className="" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <Link to="/gallery">
+          <button
+            className="font-bold bg-green text-white flex flex-row gap-5 justify-center items-center rounded-lg w-[200px] mt-10 mb-10 "
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <VisibilityIcon />
+            <img src={whiteline} className="w-[1px] py-[4px]" />
+            View more
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -197,6 +197,15 @@ const Menu = ({ setMenu }) => {
         </span>
 
         <li>
+          <Link to="/gallery" onClick={() => setMenu(false)}>
+            Gallery
+          </Link>
+        </li>
+        <span className="lg:rotate-0 rotate-90">
+          <img src={line} className="w-[2px] h-[30px]" />
+        </span>
+
+        <li>
           <a href="#contacts" onClick={() => setMenu(false)}>
             Contacts
           </a>

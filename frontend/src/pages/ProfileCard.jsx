@@ -4,6 +4,7 @@ import { mp, CM, DCM } from "../assets";
 import { ScrollContext } from "../ScrollContext";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 const ProfileCard = () => {
   const scrolls = useContext(ScrollContext);
@@ -157,6 +158,12 @@ const ProfileCard = () => {
                     M.P - Lugari constituency
                   </span>
                 </p>
+                <a
+                  href="https://www.facebook.com/HonNabiiNabwera?mibextid=ZbWKwL"
+                  target="_blank"
+                >
+                  <FacebookIcon className="text-blue-600" />
+                </a>
               </div>
             </div>
           </div>
@@ -314,34 +321,58 @@ const ProfileCard = () => {
           </div>
         </div>
       ) : profile == "COM" ? (
-        <div className="flex lg:flex-row flex-col items bg-gray-100  w-[800px] my-20 justify-between">
-          <div className="flex  items center justify-center ">
-            <img
-              src={CM}
-              alt="member_of_parliarment_lugari"
-              className="w-[850px]"
-            />
-          </div>
-          <div className="flex flex-col items-center  w-full justify-center ">
-            <div className="flex flex-col gap-6 mx-10">
-              <h1 className="font-bold mt-10 text-[25px]   ">
-                Mr. Rajab Atako Mukolwe
-              </h1>
-              <p className="w-full text-green">Constituency Office Manager</p>
-              <p>
-                His excellency Nabwera Daraja Nabii was elected the Memeber of
-                Lugari Constituency during the Kenyan General Elections on 9th
-                August 2022. He assumed office on 25th August after taking the
-                oath of office.
-              </p>
-
-              <p className="font-bold">
-                Rajab Atako Mukolwe{" "}
-                <span className="font-light text-[14px]">
-                  COM - Lugari constituency
-                </span>
-              </p>
+        <div className="flex flex-col items-center ">
+          <div className="flex lg:flex-row flex-col items bg-gray-100  w-[800px] my-20 justify-between">
+            <div className="flex  items center justify-center ">
+              <img
+                src={CM}
+                alt="member_of_parliarment_lugari"
+                className="w-[850px]"
+              />
             </div>
+            <div className="flex flex-col items-center  w-full justify-center ">
+              <div className="flex flex-col gap-6 mx-10">
+                <h1 className="font-bold mt-10 text-[25px]   ">
+                  Mr. Rajab Atako Mukolwe
+                </h1>
+                <p className="w-full text-green">Constituency Office Manager</p>
+                <p>
+                  Mr. Rajab Atako Mukolwe is the Constituency Office Manager
+                  incharge of Lugari's day to day activities under the
+                  leadership of Hon Nabwera who is the MP.He was appointed by
+                  thr MP after he took office.{" "}
+                </p>
+
+                <p className="font-bold">
+                  Rajab Atako Mukolwe{" "}
+                  <span className="font-light text-[14px]">
+                    COM - Lugari constituency
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mx-4 mb-10">
+            <h1 className="text-green text-[30px] items-center justify-center underline-motion">
+              Welcome Note
+            </h1>
+            <p className="text-gray-500 flex flex-col gap-2">
+              I extend a very warm welcome to all lugarians to this platform; a
+              platform that we intend to make a one-stop shop for all services
+              that will be beneficial to the constituents that we serve. I am
+              most grateful that all of you have continued to give us the
+              support that we direly need. I hope and pray that we will continue
+              engaging interactively and happily to ensure that we move the 4G
+              network to greater heights. Success is ours to take and together
+              we will walk high in glory in not only in Kakamega county, but in
+              this entire Nation and beyond our borders. It gives me great
+              pleasure to serve you the people of Lugari in my capacity as
+              constituency manager. Together we focus on being the greatest
+              Constituency in the republic of Kenya.
+              <span className="text-green">
+                Mr Rajab Atako Mukolwe, COM - Lugari constituency.
+              </span>
+            </p>
           </div>
         </div>
       ) : profile == "DCM" ? (
@@ -360,10 +391,10 @@ const ProfileCard = () => {
               </h1>
               <p className="w-full text-green">Deputy Constituency Manager</p>
               <p>
-                His excellency Nabwera Daraja Nabii was elected the Memeber of
-                Lugari Constituency during the Kenyan General Elections on 9th
-                August 2022. He assumed office on 25th August after taking the
-                oath of office.
+                Mrs. Marrystella Nyukuri is the Deputy Constituency Manager
+                under Mr Mr. Rajab Atako Mukolwe incharge of Lugari's day to day
+                activities under the leadership of Hon Nabwera who is the MP.He
+                was appointed by thr MP after he took office.{" "}
               </p>
 
               <p className="font-bold ">

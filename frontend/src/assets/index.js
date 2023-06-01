@@ -14,6 +14,37 @@ import harvest2 from "./harvest.jpg";
 import bursary from "./bursary.jpg";
 import CM from "./CM.jpg";
 import DCM from "./DCM.jpg";
+import lg1 from "./Gallery/lg1.jpg";
+import lg2 from "./Gallery/lg2.jpg";
+import lg3 from "./Gallery/lg3.jpg";
+import lg4 from "./Gallery/lg4.jpg";
+import lg5 from "./Gallery/lg5.jpg";
+import lg6 from "./Gallery/lg6.jpg";
+import lg7 from "./Gallery/lg7.jpg";
+import lg8 from "./Gallery/lg8.jpg";
+import lg9 from "./Gallery/lg9.jpg";
+import lg10 from "./Gallery/lg10.jpg";
+import lg11 from "./Gallery/lg11.jpg";
+import lg12 from "./Gallery/lg12.jpg";
+import lg13 from "./Gallery/lg13.jpg";
+import lg14 from "./Gallery/lg14.jpg";
+
+const gallery = [
+  lg1,
+  lg2,
+  lg3,
+  lg4,
+  lg5,
+  lg6,
+  lg7,
+  lg8,
+  lg9,
+  lg10,
+  lg11,
+  lg12,
+  lg13,
+  lg14,
+];
 
 const deps = [
   {
@@ -61,4 +92,5 @@ export {
   harvest2,
   CM,
   DCM,
+  gallery,
 };

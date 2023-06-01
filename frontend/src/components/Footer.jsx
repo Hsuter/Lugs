@@ -39,7 +39,13 @@ const Footer = () => {
               Busary Forms
             </a>
           </li>
-          <li className="hover:text-blue-600 cursor-pointer">Careers</li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            {" "}
+            <a href="https://lugari.ngcdf.go.ke/jobs/" target="_blank">
+              {" "}
+              Carrers
+            </a>
+          </li>
           <li className="hover:text-blue-600 cursor-pointer">
             <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank">
               {" "}
