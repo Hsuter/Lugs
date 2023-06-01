@@ -8,6 +8,7 @@ import ProfileCard from "./pages/ProfileCard";
 import KenyanNews from "./components/KenyanNews";
 import Wards from "./pages/Wards";
 import Gallery from "./pages/Gallery";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -69,6 +70,18 @@ function App() {
                 <div className="flex flex-col">
                   <Navbar />
                   <Gallery />
+                  <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/events"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Navbar />
+                  <Events />
                   <Footer />
                 </div>
               </>

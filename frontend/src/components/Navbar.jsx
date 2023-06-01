@@ -18,11 +18,6 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(scrollDirection);
-    console.log(scrollPosition);
-  }, [scrollDirection, scrollPosition]);
-
   // Replace with your desired longitude
 
   return (

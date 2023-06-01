@@ -147,16 +147,6 @@ const Menu = ({ setMenu }) => {
             >
               Deputy Constituency Manager
             </p>
-            <p
-              className="border-b-2 border-green w-full p-1 flex justify-center"
-              onClick={() => {
-                setProfile("DCM");
-                navigate("/staff_profile");
-                window.scrollTo(0, 0);
-              }}
-            >
-              History of LC
-            </p>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">

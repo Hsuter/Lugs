@@ -19,10 +19,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 import { gallery } from "../assets";
 
+
 const Home = () => {
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
   const navigate = useNavigate();
+
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
