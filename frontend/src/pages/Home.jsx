@@ -19,12 +19,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 import { gallery } from "../assets";
 
-
 const Home = () => {
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
   const navigate = useNavigate();
-
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -117,7 +115,7 @@ const Home = () => {
             </Link>
             <Link>
               {" "}
-              Chevaywaand{" "}
+              Chevaywa{" "}
               <span className="text-black">
                 (Population: 33,145 Area: 57.0km² )
               </span>
