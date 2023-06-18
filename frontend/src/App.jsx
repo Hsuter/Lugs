@@ -13,8 +13,6 @@ import Events from "./pages/Events";
 function App() {
   return (
     <>
-    {/*Bugs intentional*/}
-    <div>
       <div className="App flex-1   overflow-x-hidden hide-scrollbar  flex-col-reverse">
         <Routes>
           <Route
