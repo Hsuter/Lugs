@@ -21,31 +21,32 @@ const Navbar = () => {
   // Replace with your desired longitude
 
   return (
-    <div
-      className={`bg-green w-full items-center flex flex-col justify-center  top-0 z-20`}
-      id="home"
-    >
-      <div className="py-2 w-full flex flex-col items-center ">
-        <div
-          className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
-          onClick={handleMenu}
-        >
-          {menu ? (
-            <CloseIcon className=" text-black " />
-          ) : (
-            <MenuIcon className=" text-black " />
-          )}
-        </div>
-
-        <div className={`w-full    ${menu ? "flex" : "lg:flex hidden"}`}>
-          <Menu setMenu={setMenu} />
-        </div>
-
-        <h1 className="text-white md:text-[30px]">
-          Welcome to Lugari Constituency
-        </h1>
-      </div>
-    </div>
+    <></>
+    //<div
+    //  className={`bg-green w-full items-center flex flex-col justify-center  top-0 z-20`}
+    //  id="home"
+    //>
+    //  <div className="py-2 w-full flex flex-col items-center ">
+    //    <div
+    //      className="bg-white absolute left-0 ml-1 rounded-full lg:hidden z-20"
+    //      onClick={handleMenu}
+    //    >
+    //      {menu ? (
+    //        <CloseIcon className=" text-black " />
+    //      ) : (
+    //        <MenuIcon className=" text-black " />
+    //      )}
+    //    </div>
+    //
+    //    <div className={`w-full    ${menu ? "flex" : "lg:flex hidden"}`}>
+    //      <Menu setMenu={setMenu} />
+    //    </div>
+    //
+    //    <h1 className="text-white md:text-[30px]">
+    //      Welcome to Lugari Constituency
+    //    </h1>
+    //  </div>
+    //</div>
   );
 };
 
