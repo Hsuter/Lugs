@@ -147,6 +147,14 @@ const Menu = ({ setMenu }) => {
             >
               Deputy Constituency Manager
             </p>
+            <a
+              href="https://drive.google.com/file/d/1aqlmJ9LsgHaNYH_phE3TqHbZr4AxAKor/view?usp=drive_link"
+              target="_blank"
+            >
+              <p className="border-b-2 border-green w-full p-1 flex justify-center">
+                Strategic Plan
+              </p>
+            </a>
           </div>
         </li>
         <span className="lg:rotate-0 rotate-90">

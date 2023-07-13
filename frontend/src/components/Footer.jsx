@@ -12,7 +12,6 @@ const Footer = () => {
   });
   const center = useMemo(() => ({ lat: 0.6616836, lng: 34.8817256 }), []);
   return (
-   
     <div
       className="flex flex-col w-full bg-green items-center gap-4  footertxt"
       id="contacts"
@@ -60,6 +59,15 @@ const Footer = () => {
             <a href="https://lugari.ngcdf.go.ke/downloads/" target="_blank">
               {" "}
               Downloads
+            </a>
+          </li>
+          <li className="hover:text-blue-600 cursor-pointer">
+            <a
+              href="https://drive.google.com/file/d/1aqlmJ9LsgHaNYH_phE3TqHbZr4AxAKor/view?usp=drive_link"
+              target="_blank"
+            >
+              {" "}
+              Strategic Plan
             </a>
           </li>
           <li className="hover:text-blue-600 cursor-pointer">
