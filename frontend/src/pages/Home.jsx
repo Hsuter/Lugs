@@ -318,11 +318,6 @@ const Home = () => {
           </button>
         </Link>
       </div>
-      <div className="z-10 absolute bottom-0 right-0 ">
-        <ReactWhatsapp number="0702600436">
-          <img src={whatsapp} className="w-[120px] " />
-        </ReactWhatsapp>
-      </div>
     </div>
   );
 };
