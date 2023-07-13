@@ -93,17 +93,9 @@ const Menu = ({ setMenu }) => {
         >
           <div
             className={`flex  w-[150px] flex-row gap-2  items-center justify-center`}
+            onClick={() => {}}
           >
-            <a
-              href="#about"
-              onClick={() => {
-                setMenu(false);
-                handleHome();
-                navigate("/");
-              }}
-            >
-              About LC
-            </a>
+            <a>About LC</a>
 
             <div className="flex flex-col relative items-center  ">
               <span className="text-green">

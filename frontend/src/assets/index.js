@@ -28,22 +28,141 @@ import lg11 from "./Gallery/lg11.jpg";
 import lg12 from "./Gallery/lg12.jpg";
 import lg13 from "./Gallery/lg13.jpg";
 import lg14 from "./Gallery/lg14.jpg";
+import pic4 from "./Gallery/pic4.jpg";
+import pic5 from "./Gallery/pic5.jpg";
+import pic6 from "./Gallery/pic6.jpg";
+import pic7 from "./Gallery/pic7.jpg";
+import pic8 from "./Gallery/pic8.jpg";
+import pic9 from "./Gallery/pic9.jpg";
+import pic10 from "./Gallery/pic10.jpg";
+import pic11 from "./Gallery/pic11.jpg";
+import pic16 from "./Gallery/pic16.jpg";
+import pic17 from "./Gallery/pic17.jpg";
+import pic23 from "./Gallery/pic23.jpg";
+import pic29 from "./Gallery/pic29.jpg";
+import pic31 from "./Gallery/pic31.jpg";
 
 const gallery = [
-  lg1,
-  lg2,
-  lg3,
-  lg4,
-  lg5,
-  lg6,
-  lg7,
-  lg8,
-  lg9,
-  lg10,
-  lg11,
-  lg12,
-  lg13,
-  lg14,
+  {
+    image: lg1,
+    caption: "",
+  },
+  {
+    image: lg2,
+    caption: "Tree plantimg at Forestal secondary school",
+  },
+  {
+    image: lg3,
+    caption:
+      "Hon Nabii with Govonor Barasa at the Inaugural education stakeholder's conference",
+  },
+  {
+    image: lg4,
+    caption: "Football tournament at Chevaywa mini stadium",
+  },
+  {
+    image: lg5,
+    caption: "Football tournament at Chevaywa mini stadium",
+  },
+  {
+    image: lg6,
+    caption:
+      "Prayer session with students of Lukhokho  Secodnary in Luandeti ward",
+  },
+  {
+    image: lg7,
+    caption: "Adressing students at Holy Family Musembe Secondary School",
+  },
+  {
+    image: lg8,
+    caption: " Hon Nabii hosting a Harambee at Salvation army Matete",
+  },
+  {
+    image: lg9,
+    caption: "Hon Nabii posing with faithfulls at Salvation army Matete",
+  },
+  {
+    image: lg10,
+    caption: "Speaking to students at Muyugi primary school",
+  },
+  {
+    image: lg11,
+    caption: "Ground breaking of the ",
+  },
+  {
+    image: lg12,
+    caption:
+      "Hon Nabii Adressing KEPSHA and KESHA stakeholders at Downhill springs hotels at Kaburebgu",
+  },
+  {
+    image: lg13,
+    caption:
+      "Hon Nabii with speaker Dr Moses Wetangula together with Hon Martin Pepela in the United Kingdom ",
+  },
+  {
+    image: lg14,
+    caption: "Tree plantimg at Forestal secondary school",
+  },
+  {
+    image: pic4,
+    caption:
+      "Hon Nabii leading demonstrations on saba saba day in Kakamega County",
+  },
+  {
+    image: pic5,
+    caption: "Hosting Lugari Constituency MCA'S at Zuri Hotel in Bugoma",
+  },
+  {
+    image: pic6,
+    caption: "Adressing students at St. Cecilia girls Mautuma",
+  },
+  {
+    image: pic7,
+    caption: "Hosting Lugari Constituency MCA'S at Zuri Hotel in Bugoma",
+  },
+  {
+    image: pic8,
+    caption:
+      "Receiving the trophy on behalf of ABN girls after winning the regional competitions.",
+  },
+  {
+    image: pic9,
+    caption:
+      "Celebration with ABN girls after winning the regional competitions.",
+  },
+  {
+    image: pic10,
+    caption: "Hon Nabii with Hon John Waluke of Sirisia Constituency",
+  },
+  {
+    image: pic11,
+    caption:
+      "Hon Nabii with Dr Moses Wetangula and Hon Dan Wanyama of Webuye West Constituency",
+  },
+  {
+    image: pic16,
+    caption:
+      "Hon Nabii at Lugari Boys High School advising the form 4 students.",
+  },
+  {
+    image: pic17,
+    caption:
+      "Hon Nabii launching a multi storey building at Makhukhuni primary school.",
+  },
+  {
+    image: pic23,
+    caption:
+      "Hon Nabii opening the newly built NGCDF classrooms at Muyugi primary school.",
+  },
+  {
+    image: pic29,
+    caption:
+      "Ground breaking of 200 capacity male dormitory at Chekalini secondary school.",
+  },
+  {
+    image: pic31,
+    caption: "Hon Nabii Adressing students at AIC Sipande in Mautauma ward",
+  },
 ];
 
 const deps = [

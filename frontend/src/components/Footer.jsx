@@ -71,6 +71,12 @@ const Footer = () => {
             </a>
           </li>
           <li className="hover:text-blue-600 cursor-pointer">
+            <a href="" target="">
+              {" "}
+              Elimu
+            </a>
+          </li>
+          <li className="hover:text-blue-600 cursor-pointer">
             FAQs & Help Desks
           </li>
         </div>

@@ -296,9 +296,9 @@ const Home = () => {
             className="flex flex-row justify-start gap-10"
             style={{ width: `${gallery.length * 320}px` }}
           >
-            {gallery.map((image, index) => (
+            {gallery.map((item, index) => (
               <div key={index} className="flex w-[300px] h-[300px]">
-                <img src={image} alt={`Image ${index}`} className="" />
+                <img src={item.image} alt={`Image ${index}`} className="" />
               </div>
             ))}
           </div>
