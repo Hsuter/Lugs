@@ -99,10 +99,7 @@ const gallery = [
     caption:
       "Hon Nabii with speaker Dr Moses Wetangula together with Hon Martin Pepela in the United Kingdom ",
   },
-  {
-    image: lg14,
-    caption: "Tree plantimg at Forestal secondary school",
-  },
+
   {
     image: pic4,
     caption:
