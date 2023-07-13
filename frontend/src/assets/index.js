@@ -8,7 +8,7 @@ import line from "./line.png";
 import bunnerText from "./bunnerText.png";
 import coarms from "./coarms.png";
 import mp from "./mp.jpg";
-import constr from "./constr.jpg";
+import whatsapp from "./whatsapp.png";
 import whiteline from "./whiteline.png";
 import harvest2 from "./harvest.jpg";
 import bursary from "./bursary.jpg";
@@ -220,4 +220,5 @@ export {
   CM,
   DCM,
   gallery,
+  whatsapp,
 };

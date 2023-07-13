@@ -18,6 +18,8 @@ import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 import { gallery } from "../assets";
+import { whatsapp } from "../assets";
+import ReactWhatsapp from "react-whatsapp";
 
 const Home = () => {
   const scrolls = useContext(ScrollContext);
@@ -315,6 +317,11 @@ const Home = () => {
             View more
           </button>
         </Link>
+      </div>
+      <div className="z-10 absolute bottom-0 right-0 ">
+        <ReactWhatsapp number="0702600436">
+          <img src={whatsapp} className="w-[120px] " />
+        </ReactWhatsapp>
       </div>
     </div>
   );
