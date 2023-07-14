@@ -18,8 +18,7 @@ import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
 import { gallery } from "../assets";
-import { whatsapp } from "../assets";
-import ReactWhatsapp from "react-whatsapp";
+
 
 const Home = () => {
   const scrolls = useContext(ScrollContext);

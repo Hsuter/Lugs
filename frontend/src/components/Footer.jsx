@@ -6,6 +6,8 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import { coarms } from "../assets";
 import { CircularProgress } from "@mui/material";
 import { Link } from "react-router-dom";
+import ReactWhatsapp from "react-whatsapp";
+import { whatsapp } from "../assets";
 
 const Footer = () => {
   const { isLoaded } = useLoadScript({
@@ -21,12 +23,18 @@ const Footer = () => {
         <div className="flex flex-col bg-gray-100 opacity-80 text-blackdark font-bold justify-center  items-center gap-2  w-[500px] pt-16">
           <h1>OFFICIAL CONTACTS</h1>
           <p>
-            <WhatsAppIcon />
+            {" "}
+            <LocalPhoneIcon />
             0702600436
           </p>
-          <p>
-            <LocalPhoneIcon /> 0733608860
-          </p>
+          <ReactWhatsapp number="+254 733608860" message="">
+            <p className="cursor-pointer flex flex-row items-center">
+              {" "}
+              <img src={whatsapp} alt="whatsapp_lugari" className="w-[35px] ml-[-10px]" />
+              0733608860
+            </p>
+          </ReactWhatsapp>
+
           <p>
             <EmailIcon />
             info@lugariconstituency.go.ke
