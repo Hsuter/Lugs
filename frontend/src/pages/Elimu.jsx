@@ -3,7 +3,7 @@ import React from "react";
 const Elimu = () => {
   return (
     <div className="h-[100vh] flex">
-      <ul className="flex flex-col gap-10 font-bold  list-decimal mx-10 cursor-pointer mt-10">
+      <ul className="flex flex-col gap-10 font-bold  list-decimal mx-10 cursor-pointer mt-10 md:text-[30px] text-[20px] ">
         <li className="hover:text-blue-600">
           {" "}
           <a
