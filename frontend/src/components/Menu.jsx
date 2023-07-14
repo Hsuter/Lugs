@@ -194,6 +194,15 @@ const Menu = ({ setMenu }) => {
         <span className="lg:rotate-0 rotate-90">
           <img src={line} className="w-[2px] h-[30px]" />
         </span>
+        <Link to="/elimu">
+          <li>
+            <a onClick={() => setMenu(false)}>Elimu</a>
+          </li>
+        </Link>
+
+        <span className="lg:rotate-0 rotate-90">
+          <img src={line} className="w-[2px] h-[30px]" />
+        </span>
 
         <li>
           <a href="#contacts" onClick={() => setMenu(false)}>

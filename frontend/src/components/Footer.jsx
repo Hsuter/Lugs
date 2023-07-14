@@ -5,6 +5,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import { coarms } from "../assets";
 import { CircularProgress } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { isLoaded } = useLoadScript({
@@ -70,12 +71,11 @@ const Footer = () => {
               Strategic Plan
             </a>
           </li>
+
           <li className="hover:text-blue-600 cursor-pointer">
-            <a href="" target="">
-              {" "}
-              Elimu
-            </a>
+            <Link to="/elimu"> Elimu</Link>
           </li>
+
           <li className="hover:text-blue-600 cursor-pointer">
             FAQs & Help Desks
           </li>

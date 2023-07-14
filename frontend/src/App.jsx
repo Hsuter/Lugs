@@ -9,6 +9,7 @@ import KenyanNews from "./components/KenyanNews";
 import Wards from "./pages/Wards";
 import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
+import Elimu from "./pages/Elimu";
 
 function App() {
   return (
@@ -82,6 +83,18 @@ function App() {
                 <div className="flex flex-col">
                   <Navbar />
                   <Events />
+                  <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/elimu"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Navbar />
+                  <Elimu />
                   <Footer />
                 </div>
               </>
