@@ -17,9 +17,12 @@ import { useEffect, useContext } from "react";
 import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
+import { useSelector } from "react-redux";
+import { CircularProgress } from "@mui/material";
 
 const Home = () => {
-  const gallery = []
+  const images = useSelector((state) => state.products);
+
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
   const navigate = useNavigate();
@@ -292,16 +295,26 @@ const Home = () => {
           Gallery
         </h1>
         <div className="overflow-x-scroll w-full h-[300px]">
-          <div
-            className="flex flex-row justify-start gap-10"
-            style={{ width: `${gallery.length * 320}px` }}
-          >
-            {gallery.map((item, index) => (
-              <div key={index} className="flex w-[300px] h-[300px]">
-                <img src={item.image} alt={`Image ${index}`} className="" />
-              </div>
-            ))}
-          </div>
+          {images.status == "pending" ? (
+            <>
+              <p>Loading</p> <CircularProgress />
+            </>
+          ) : (
+            <div
+              className="flex flex-row justify-start gap-10"
+              style={{ width: `${images.items.length * 320}px` }}
+            >
+              {images.items.map((item, index) => (
+                <div key={index} className="flex  ">
+                  <img
+                    src={item.image.url}
+                    alt={`${item.caption}`}
+                    className=""
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <Link to="/gallery">
           <button
