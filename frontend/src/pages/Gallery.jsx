@@ -21,14 +21,10 @@ const Gallery = () => {
           {images.items.map((item, i) => (
             <div
               key={i}
-              className="items-center justify-center flex flex-col text-gray-500"
+              className="items-center justify-center flex flex-col text-gray-500   md:w-[800px]"
             >
-              <img
-                src={item.image.url}
-                className="h-[300px]"
-                alt={item.caption}
-              />
-              <p>{item.caption}</p>
+              <img src={item.image.url} className="" alt={item.caption} />
+              <p className="text-center">{item.caption}</p>
             </div>
           ))}
         </>
