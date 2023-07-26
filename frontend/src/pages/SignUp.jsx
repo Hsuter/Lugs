@@ -110,7 +110,7 @@ const SignUp = () => {
           </div>
           <div className="flex">
             <p className="text-txtgray">
-              Already have an account?{" "}
+              Already have an account?
               <Link className="text-darkblue" to="/login">
                 Login
               </Link>
