@@ -10,12 +10,13 @@ import Wards from "./pages/Wards";
 import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
 import Elimu from "./pages/Elimu";
-import SignUp from "./pages/Signup";
+
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddImages from "./pages/AddImages";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -122,7 +123,7 @@ function App() {
             element={
               <>
                 <div className="flex flex-col">
-                  <SignUp />
+                  <Register />
                 </div>
               </>
             }

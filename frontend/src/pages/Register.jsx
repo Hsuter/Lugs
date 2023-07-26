@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../features/authSlice";
 
-const SignUp = () => {
+const Register = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
@@ -122,4 +122,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Register;
