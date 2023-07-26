@@ -8,6 +8,7 @@ import { CircularProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 import ReactWhatsapp from "react-whatsapp";
 import { whatsapp } from "../assets";
+import KeyIcon from "@mui/icons-material/Key";
 
 const Footer = () => {
   const { isLoaded } = useLoadScript({
@@ -30,7 +31,11 @@ const Footer = () => {
           <ReactWhatsapp number="+254 733608860" message="">
             <p className="cursor-pointer flex flex-row items-center">
               {" "}
-              <img src={whatsapp} alt="whatsapp_lugari" className="w-[35px] ml-[-10px]" />
+              <img
+                src={whatsapp}
+                alt="whatsapp_lugari"
+                className="w-[35px] ml-[-10px]"
+              />
               0733608860
             </p>
           </ReactWhatsapp>
@@ -102,9 +107,19 @@ const Footer = () => {
           )}
         </div>
       </div>
-      <p className="text-white">
-        Copyright © 2023 Constituency of Lugari . All Rights Reserved.
-      </p>
+      <div className="flex flex-row  w-full items-center justify-center">
+        {" "}
+        <p className="text-white">
+          Copyright © 2023 Constituency of Lugari . All Rights Reserved.
+        </p>{" "}
+        <p className="text-white right-0 absolute m-2 hover:cursor-pointer flex items-center gap-1">
+          <Link to="/login">
+            {" "}
+            <KeyIcon fontSize="" />
+            Admin
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

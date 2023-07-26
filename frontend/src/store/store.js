@@ -1,12 +1,13 @@
-// store.js
-
 import { configureStore } from "@reduxjs/toolkit";
-import newsReducer, { newsFetch } from "../redux/fetchNews";
+import authReducer, { loadUser } from "../features/authSlice";
+import productsReducer, { productsFetch } from "../features/productSlice";
 
-const store = configureStore({
-  reducer: { news: newsReducer },
+export const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    products: productsReducer,
+  },
 });
 
-store.dispatch(newsFetch());
-
-export default store;
+store.dispatch(productsFetch());
+store.dispatch(loadUser(null));

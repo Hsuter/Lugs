@@ -1,7 +1,7 @@
 import React from "react";
-import { gallery } from "../assets";
 
 const Gallery = () => {
+  const gallery = [];
   return (
     <div className="w-full flex flex-row flex-wrap gap-10 items-center justify-center my-10">
       <h1 className="md:text-[30px] underline-motion text-[25px] font-bold w-full text-green flex flex-row pl-10 py-5">
@@ -13,8 +13,8 @@ const Gallery = () => {
           key={i}
           className=" items-center justify-center flex flex-col text-gray-500"
         >
-          <img src={item.image} className="h-[300px]" alt={item.caption} />
-          <p>{item.caption}</p>
+          <img src={""} className="h-[300px]" alt={""} />
+          <p>{}</p>
         </div>
       ))}
     </div>

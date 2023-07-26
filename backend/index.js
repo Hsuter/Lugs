@@ -1,30 +1,18 @@
 const helmet = require("helmet");
 const express = require("express");
 const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const login = require("./routes/login.js");
+const register = require("./routes/register");
+const productsRoute = require("./routes/products.js");
+const bodyParser = require("body-parser");
+
 const app = express();
-const axios = require("axios");
 
-const options = {
-  method: "GET",
-  url: "https://newsdata.io/api/1/news?apikey=pub_23206f554d5c9daf754ab158d36a80c9ff3e7&q=kenya&country=ke",
-  headers: {
-    "X-RapidAPI-Key": "59037cf1fcmshba9ceea6063766cp196fcajsna2e6a26eb492",
-    "X-RapidAPI-Host": "newsdata2.p.rapidapi.com",
-  },
-};
-
-const fetchData = async () => {
-  try {
-    const response = await axios.request(options);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-};
+dotenv.config();
 
 app.use(cors());
-
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -37,18 +25,27 @@ app.use(
     },
   })
 );
+app.use(bodyParser.json({ limit: "50mb" }));
+app.use(bodyParser.urlencoded({ limit: "500mb", extended: true }));
+app.use(express.json());
 
-// Endpoint to fetch the data
-app.get("/api/news", async (req, res) => {
-  try {
-    const data = await fetchData();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
+app.use("/api/login", login);
+app.use("/api/register", register);
+app.use("/api/products", productsRoute);
 
-const port = process.env.PORT || 8000;
-const uri = process.env.DB_URI;
+//get request
+
+const port = 8000;
+const uri =
+  "mongodb+srv://lugariconstituecy:lugs@cluster0.lmiae4z.mongodb.net/";
 
 app.listen(port, console.log(`Server running on port ${port}`));
+
+mongoose.set("strictQuery", false);
+
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Mogodb conn successfull"));

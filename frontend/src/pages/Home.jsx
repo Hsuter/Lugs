@@ -17,10 +17,9 @@ import { useEffect, useContext } from "react";
 import NewsCard from "../components/NewsCard";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScrollContext } from "../ScrollContext";
-import { gallery } from "../assets";
-
 
 const Home = () => {
+  const gallery = []
   const scrolls = useContext(ScrollContext);
   const { profile, setProfile } = scrolls;
   const navigate = useNavigate();

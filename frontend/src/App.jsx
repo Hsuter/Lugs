@@ -10,11 +10,18 @@ import Wards from "./pages/Wards";
 import Gallery from "./pages/Gallery";
 import Events from "./pages/Events";
 import Elimu from "./pages/Elimu";
+import SignUp from "./pages/Signup";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import AddImages from "./pages/AddImages";
 
 function App() {
   return (
     <>
       <div className="App flex-1   overflow-x-hidden hide-scrollbar  flex-col-reverse">
+        <ToastContainer />
         <Routes>
           <Route
             path="/"
@@ -96,6 +103,46 @@ function App() {
                   <Navbar />
                   <Elimu />
                   <Footer />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Login />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <SignUp />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <Admin />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/addimages"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <AddImages />
                 </div>
               </>
             }
