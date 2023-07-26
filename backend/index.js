@@ -34,13 +34,12 @@ app.use("/api/login", login);
 app.use("/api/register", register);
 app.use("/api/products", productsRoute);
 
-
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 // Catch-all route for client-side routing
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 //get request
 
 const port = 8000;
