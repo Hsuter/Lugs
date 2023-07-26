@@ -7,6 +7,7 @@ const login = require("./routes/login.js");
 const register = require("./routes/register");
 const productsRoute = require("./routes/products.js");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 
@@ -32,6 +33,14 @@ app.use(express.json());
 app.use("/api/login", login);
 app.use("/api/register", register);
 app.use("/api/products", productsRoute);
+
+
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// Catch-all route for client-side routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 //get request
 
