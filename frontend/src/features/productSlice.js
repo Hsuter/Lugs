@@ -74,31 +74,25 @@ const productsSlice = createSlice({
     });
     builder.addCase(productsCreate.pending, (state, action) => {
       state.createStatus = "pending";
-      console.log("pending");
     });
     builder.addCase(productsCreate.fulfilled, (state, action) => {
       state.items.push(action.payload);
       state.createStatus = "success";
       toast.success("Image added!");
-      console.log("created");
     });
     builder.addCase(productsCreate.rejected, (state, action) => {
       state.createStatus = "rejected";
-      console.log("rejected");
     });
     builder.addCase(productsDelete.pending, (state, action) => {
       state.createStatus = "pending";
-      console.log("pending");
     });
     builder.addCase(productsDelete.fulfilled, (state, action) => {
       state.items.push(action.payload);
       state.createStatus = "success";
       toast.success("Image deleted!");
-      console.log("created");
     });
     builder.addCase(productsDelete.rejected, (state, action) => {
       state.createStatus = "rejected";
-      console.log("rejected");
     });
   },
 });

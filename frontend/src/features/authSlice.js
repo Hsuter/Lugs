@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import { url } from "./api";
+import { toast } from "react-toastify";
 
 const initialState = {
   token: localStorage.getItem("token"),
@@ -99,6 +100,7 @@ const authSlice = createSlice({
       return { ...state, registerStatus: "pending" };
     });
     builder.addCase(registerUser.fulfilled, (state, action) => {
+      toast.success("Successfully registered");
       if (action.payload) {
         const user = jwtDecode(action.payload);
         return {
@@ -114,15 +116,20 @@ const authSlice = createSlice({
       } else return state;
     });
     builder.addCase(registerUser.rejected, (state, action) => {
+      toast.success("Invalid credentials");
       return {
         ...state,
         registerStatus: "rejected",
         registerError: action.payload,
       };
     });
+    builder.addCase(loginUser.pending, (state, action) => {
+      return { ...state, loginStatus: "pending" };
+    });
     builder.addCase(loginUser.fulfilled, (state, action) => {
       if (action.payload) {
         const user = jwtDecode(action.payload);
+        toast.success("Success");
         return {
           ...state,
           token: action.payload,
@@ -136,6 +143,7 @@ const authSlice = createSlice({
       } else return state;
     });
     builder.addCase(loginUser.rejected, (state, action) => {
+      toast.success("Invalid credentials");
       return {
         ...state,
         loginStatus: "rejected",

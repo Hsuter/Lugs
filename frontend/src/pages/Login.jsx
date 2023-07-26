@@ -65,7 +65,7 @@ const Login = () => {
             className="bg-green  text-white rounded-lg px-4 py-2 w-full"
             onClick={verify}
           >
-            Sign in
+            {auth.loginStatus == "pending" ? <p>Loading</p> : <p>Sign In</p>}
           </button>
         </div>
 

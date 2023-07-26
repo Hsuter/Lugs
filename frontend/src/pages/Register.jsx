@@ -102,10 +102,14 @@ const Register = () => {
 
           <div>
             <button
-              className="bg-blue-900  text-white rounded-lg px-4 py-2 w-full"
+              className="bg-green  text-white rounded-lg px-4 py-2 w-full"
               onClick={handleSubmit}
             >
-              Create Account
+              {auth.registerStatus == "pending" ? (
+                <p>Loading</p>
+              ) : (
+                <p> Create Account</p>
+              )}
             </button>
           </div>
           <div className="flex">
