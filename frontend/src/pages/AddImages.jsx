@@ -5,6 +5,7 @@ import { logoutUser } from "../features/authSlice";
 import { useNavigate } from "react-router-dom";
 import { productsCreate } from "../features/productSlice";
 import { Link } from "react-router-dom";
+import AdminHeader from "../components/AdminHeader";
 
 const AddImages = () => {
   const auth = useSelector((state) => state.auth);
@@ -52,23 +53,9 @@ const AddImages = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(images.items);
-  });
-
   return (
     <div className="flex flex-col items-center ">
-      <div className="flex flex-row items-center bg-orange w-full justify-center">
-        <h1 className="font-bold md:text-[50px] text-[20px] m-12">
-          Welcome {auth.name}
-        </h1>
-        <button
-          className="bg-green md:px-4 px-2 h-10 rounded-lg absolute right-0 m-2 cursor-pointer  text-white "
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
-      </div>
+      <AdminHeader />
       <div className="w-full">
         {auth.isAdmin ? (
           <div className="w-full flex flex-col items-center">

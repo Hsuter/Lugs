@@ -17,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddImages from "./pages/AddImages";
 import Register from "./pages/Register";
+import MangeUser from "./pages/MangeUser";
 
 function App() {
   return (
@@ -144,6 +145,16 @@ function App() {
               <>
                 <div className="flex flex-col">
                   <AddImages />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/users"
+            element={
+              <>
+                <div className="flex flex-col">
+                  <MangeUser />
                 </div>
               </>
             }

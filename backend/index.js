@@ -8,6 +8,7 @@ const register = require("./routes/register");
 const productsRoute = require("./routes/products.js");
 const bodyParser = require("body-parser");
 const path = require("path");
+const users = require("./routes/getUsers.js");
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use(express.json());
 app.use("/api/login", login);
 app.use("/api/register", register);
 app.use("/api/products", productsRoute);
+app.use("/api/users", users);
 
 app.use(express.static(path.join("./public/main.html")));
 

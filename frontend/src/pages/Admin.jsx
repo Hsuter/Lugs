@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { logoutUser } from "../features/authSlice";
 import { useNavigate } from "react-router-dom";
 import { productsDelete } from "../features/productSlice";
+import { Link } from "react-router-dom";
+import AdminHeader from "../components/AdminHeader";
 
 const Admin = () => {
   const auth = useSelector((state) => state.auth);
@@ -13,13 +15,11 @@ const Admin = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    dispatch(logoutUser());
-    navigate("/login");
-  };
-
   const handleAddImages = () => {
     navigate("/addimages");
+  };
+  const handleUsers = () => {
+    navigate("/users");
   };
 
   const handleDelete = (id) => {
@@ -29,26 +29,23 @@ const Admin = () => {
 
   return (
     <div className="flex flex-col items-center ">
-      <div className="flex flex-row items-center bg-orange w-full justify-center">
-        <h1 className="font-bold md:text-[50px] text-[20px] m-12">
-          Welcome {auth.name}
-        </h1>
-        <button
-          className="bg-green md:px-4 px-2 h-10 rounded-lg absolute right-0 m-2 cursor-pointer  text-white "
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
-      </div>
+      <AdminHeader />
 
       {auth.isAdmin ? (
         <div className="">
-          <div>
+          <div className="flex flex-col">
             <button
               className="bg-green px-4 h-10 rounded-lg absolute right-0 m-2 cursor-pointer  text-white "
               onClick={handleAddImages}
             >
               Add images
+            </button>
+
+            <button
+              className="bg-green px-4 h-10 rounded-lg absolute right-0 mt-16 m-2 cursor-pointer  text-white "
+              onClick={handleUsers}
+            >
+              Manage Users
             </button>
           </div>
 
